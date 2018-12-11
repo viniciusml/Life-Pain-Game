@@ -11,6 +11,9 @@ import MobileCoreServices
 
 class CardGameViewController: UIViewController {
     
+    @IBOutlet weak var UserHandCollectionView: UICollectionView!
+    @IBOutlet weak var RatedCardsCollectionView: UICollectionView!
+    
     var cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14,card15,card16, card17, card18, card19, card20]
     
     var userHand = [CardModel]()
@@ -81,9 +84,7 @@ class CardGameViewController: UIViewController {
         userHand = deckGeneration(cardsArray: &cardsArray, deskSize: 13)
         ratedCards  = deckGeneration(cardsArray: &userHand, deskSize: 3).sorted { $0 < $1}
         
-        for i in ratedCards {
-            print(i.pointsOfPain)
-        }
+        
 
         // Do any additional setup after loading the view.
     }
@@ -100,3 +101,24 @@ class CardGameViewController: UIViewController {
     */
 
 }
+
+
+//extension CardGameViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        if collectionView == self.RatedCardsCollectionView { return ratedCards.count }
+//        else { return 1 }
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+//    {
+//        if collectionView == self.RatedCardsCollectionView
+//        {
+//            let cell = RatedCardsCollectionView.dequeueReusableCell(withReuseIdentifier: "ratedCardsCollectionViewCell", for: indexPath) as! ratedCardsCollectionViewCell
+//
+//            cell.RatedCardsCollectionViewCellIcon.image = ratedCards[IndexPath.item].
+//        }
+//
+//    }
+//
+//}
