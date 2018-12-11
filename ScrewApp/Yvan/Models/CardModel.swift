@@ -9,7 +9,22 @@
 import Foundation
 import UIKit
 
-struct CardModel {
+struct CardModel: Equatable, Comparable {
+    static func < (lhs: CardModel, rhs: CardModel) -> Bool {
+        return lhs.pointsOfPain < rhs.pointsOfPain
+    }
+    
+    static func > (lhs: CardModel, rhs: CardModel) -> Bool {
+        return lhs.pointsOfPain > rhs.pointsOfPain
+    }
+    
+    static func <= (lhs: CardModel, rhs: CardModel) -> Bool {
+        return lhs.pointsOfPain <= rhs.pointsOfPain
+    }
+    
+    static func >= (lhs: CardModel, rhs: CardModel) -> Bool {
+        return lhs.pointsOfPain >= rhs.pointsOfPain
+    }
     
 //  TODO: implement cardId
 //    var cardId : String

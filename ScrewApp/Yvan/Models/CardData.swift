@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 let card1 = CardModel (
     cardIcon: UIImage(named: "cardIcon1")!,
     pointsOfPain: 80,

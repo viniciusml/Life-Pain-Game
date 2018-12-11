@@ -28,8 +28,13 @@ import Foundation
 
 public class CardFactory {
     
-    func createCards (/*quantity : Int*/) -> [CardModel] {
+    static let sharedInstance = CardFactory()
+    
+    private init () {
         
+    }
+    
+    func createCards (/*quantity : Int*/) -> [CardModel] {
         var cardsArray : [CardModel]
         
         cardsArray =
@@ -39,5 +44,5 @@ public class CardFactory {
         return cardsArray
     }
     
- 
+    
 }
