@@ -80,6 +80,10 @@ class CardGameViewController: UIViewController {
         
         userHand = deckGeneration(cardsArray: &cardsArray, deskSize: 13)
         ratedCards  = deckGeneration(cardsArray: &userHand, deskSize: 3).sorted { $0 < $1}
+        
+        for i in ratedCards {
+            print(i.pointsOfPain)
+        }
 
         // Do any additional setup after loading the view.
     }

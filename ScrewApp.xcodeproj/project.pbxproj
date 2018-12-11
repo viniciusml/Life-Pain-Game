@@ -14,9 +14,9 @@
 		C84052DB21BEE65300A8FF78 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052DA21BEE65300A8FF78 /* Constants.swift */; };
 		CF9A353021B93DA500F739B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A352F21B93DA500F739B3 /* AppDelegate.swift */; };
 		CF9A353221B93DA500F739B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A353121B93DA500F739B3 /* ViewController.swift */; };
-		CF9A353521B93DA500F739B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9A353321B93DA500F739B3 /* Main.storyboard */; };
 		CF9A353721B93DA500F739B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9A353621B93DA500F739B3 /* Assets.xcassets */; };
 		CF9A353A21B93DA500F739B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9A353821B93DA500F739B3 /* LaunchScreen.storyboard */; };
+		CFBFA76B21C02530008B3E2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBFA76A21C02530008B3E2D /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,10 @@
 		CF9A352C21B93DA500F739B3 /* ScrewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9A352F21B93DA500F739B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF9A353121B93DA500F739B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CF9A353421B93DA500F739B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF9A353621B93DA500F739B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF9A353921B93DA500F739B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF9A353B21B93DA500F739B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFBFA76A21C02530008B3E2D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +102,10 @@
 				C84052D121BE94A900A8FF78 /* Yvan */,
 				CF9A352F21B93DA500F739B3 /* AppDelegate.swift */,
 				CF9A353121B93DA500F739B3 /* ViewController.swift */,
-				CF9A353321B93DA500F739B3 /* Main.storyboard */,
 				C826F48C21BFC65B00F75251 /* New Group */,
 				CF9A353621B93DA500F739B3 /* Assets.xcassets */,
 				CF9A353821B93DA500F739B3 /* LaunchScreen.storyboard */,
+				CFBFA76A21C02530008B3E2D /* Main.storyboard */,
 				CF9A353B21B93DA500F739B3 /* Info.plist */,
 			);
 			path = ScrewApp;
@@ -169,9 +169,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFBFA76B21C02530008B3E2D /* Main.storyboard in Resources */,
 				CF9A353A21B93DA500F739B3 /* LaunchScreen.storyboard in Resources */,
 				CF9A353721B93DA500F739B3 /* Assets.xcassets in Resources */,
-				CF9A353521B93DA500F739B3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +195,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CF9A353321B93DA500F739B3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF9A353421B93DA500F739B3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF9A353821B93DA500F739B3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
