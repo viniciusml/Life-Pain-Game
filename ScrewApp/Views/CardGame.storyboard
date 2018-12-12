@@ -97,6 +97,7 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <gestureRecognizers/>
                                         <connections>
                                             <outlet property="RatedCardsCollectionViewCellIcon" destination="NFk-wA-NLz" id="mRE-BG-jbG"/>
                                             <outlet property="RatedCardsCollectionViewCellLabel" destination="6sK-bC-LZS" id="bdh-2i-LlC"/>
@@ -126,6 +127,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="1FT-w8-ffu"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>

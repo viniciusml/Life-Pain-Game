@@ -57,7 +57,7 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
 }
 
 
-extension CardGameViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDropDelegate, UICollectionViewDragDelegate
+extension CardGameViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDropDelegate, UICollectionViewDragDelegate, UIGestureRecognizerDelegate
 {
     
     //    COLLECTION VIEW POPULATING
@@ -78,6 +78,9 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
             //TODO: convert int to string to fit label
             let pointsOfPainString = String(ratedCards[indexPath.row].pointsOfPain)
             cell.ratedCardsCollectionViewCellLabel.text = pointsOfPainString
+            
+            cell.delegate = self
+            
             return cell
         }
         else {
@@ -215,5 +218,22 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
         }
         
     }
-    
+}
+
+    //    LONG GESTURE:
+extension CardGameViewController: RatedCardCollectionViewCellDelegate {
+    func longTapped(sender: UILongPressGestureRecognizer, cell: RatedCardsCollectionViewCell) {
+        
+        guard let indexPath = ratedCardsCollectionView.indexPath(for: cell) else {
+            return
+        }
+        
+        if sender.state == .began {
+            print(ratedCards[indexPath.row].cardDescription)
+            print("card pressed")
+        }
+        if sender.state == .ended {
+            print("card released")
+        }
+    }
 }
