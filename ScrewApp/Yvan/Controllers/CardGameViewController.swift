@@ -116,7 +116,8 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
             
             cell.ratedCardsCollectionViewCellIcon.image = ratedCards [indexPath.item].cardIcon
             //TODO: convert int to string to fit label
-            //            cell.ratedCardsCollectionViewCellLabel.text = ratedCards [indexPath.item].pointsOfPain as! String
+            var pointsOfPainString = String(ratedCards[indexPath.row].pointsOfPain)
+            cell.ratedCardsCollectionViewCellLabel.text = pointsOfPainString
             return cell
         }
         else {
