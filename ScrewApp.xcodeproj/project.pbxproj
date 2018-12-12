@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F7080D321C123D000393478 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7080D221C123D000393478 /* FirstScreenViewController.swift */; };
+		8F7080D521C1244D00393478 /* FirstScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F7080D421C1244D00393478 /* FirstScreen.storyboard */; };
 		C826F48E21BFC6E600F75251 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826F48D21BFC6E600F75251 /* CardData.swift */; };
 		C84052D321BE94C900A8FF78 /* CardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052D221BE94C900A8FF78 /* CardGameViewController.swift */; };
 		C84052D721BE968200A8FF78 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052D621BE968200A8FF78 /* CardModel.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F7080D221C123D000393478 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
+		8F7080D421C1244D00393478 /* FirstScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstScreen.storyboard; sourceTree = "<group>"; };
 		C826F48D21BFC6E600F75251 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		C84052D221BE94C900A8FF78 /* CardGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameViewController.swift; sourceTree = "<group>"; };
 		C84052D621BE968200A8FF78 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
@@ -49,13 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C84052D121BE94A900A8FF78 /* Yvan */ = {
+		8F7080D621C1246300393478 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C84052D521BE958900A8FF78 /* Controllers */,
-				C84052D421BE958000A8FF78 /* Models */,
+				CFBFA76F21C04E70008B3E2D /* userHandCollectionViewCell.swift */,
+				CFBFA76E21C04E70008B3E2D /* RatedCardsCollectionViewCell.swift */,
+				8F7080D421C1244D00393478 /* FirstScreen.storyboard */,
+				CFBFA76C21C02EA5008B3E2D /* CardGame.storyboard */,
 			);
-			path = Yvan;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C84052D421BE958000A8FF78 /* Models */ = {
@@ -73,8 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				C84052D221BE94C900A8FF78 /* CardGameViewController.swift */,
-				CFBFA76E21C04E70008B3E2D /* RatedCardsCollectionViewCell.swift */,
-				CFBFA76F21C04E70008B3E2D /* userHandCollectionViewCell.swift */,
+				8F7080D221C123D000393478 /* FirstScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -98,11 +103,12 @@
 		CF9A352E21B93DA500F739B3 /* ScrewApp */ = {
 			isa = PBXGroup;
 			children = (
-				C84052D121BE94A900A8FF78 /* Yvan */,
+				8F7080D621C1246300393478 /* Views */,
+				C84052D521BE958900A8FF78 /* Controllers */,
+				C84052D421BE958000A8FF78 /* Models */,
 				CF9A352F21B93DA500F739B3 /* AppDelegate.swift */,
 				CF9A353121B93DA500F739B3 /* ViewController.swift */,
 				CF9A353621B93DA500F739B3 /* Assets.xcassets */,
-				CFBFA76C21C02EA5008B3E2D /* CardGame.storyboard */,
 				CF9A353821B93DA500F739B3 /* LaunchScreen.storyboard */,
 				CF9A353B21B93DA500F739B3 /* Info.plist */,
 			);
@@ -168,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF9A353A21B93DA500F739B3 /* LaunchScreen.storyboard in Resources */,
+				8F7080D521C1244D00393478 /* FirstScreen.storyboard in Resources */,
 				CFBFA76D21C02EA5008B3E2D /* CardGame.storyboard in Resources */,
 				CF9A353721B93DA500F739B3 /* Assets.xcassets in Resources */,
 			);
@@ -189,6 +196,7 @@
 				CFBFA77021C04E70008B3E2D /* RatedCardsCollectionViewCell.swift in Sources */,
 				CF9A353021B93DA500F739B3 /* AppDelegate.swift in Sources */,
 				C84052DB21BEE65300A8FF78 /* Constants.swift in Sources */,
+				8F7080D321C123D000393478 /* FirstScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
