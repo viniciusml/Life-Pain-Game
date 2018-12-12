@@ -10,7 +10,7 @@ import UIKit
 
 class RatedCardsCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var RatedCardsCollectionViewCellIcon: UIImageView!
-    @IBOutlet weak var RatedCardsCollectionViewCellLabel: UILabel!
+    @IBOutlet weak var ratedCardsCollectionViewCellIcon: UIImageView!
+    @IBOutlet weak var ratedCardsCollectionViewCellLabel: UILabel!
     
 }
