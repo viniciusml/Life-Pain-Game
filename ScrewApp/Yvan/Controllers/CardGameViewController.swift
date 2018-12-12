@@ -15,12 +15,14 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
     @IBOutlet weak var userHandCollectionView: UICollectionView!
     
     @IBOutlet weak var ratedCardsCollectionView: UICollectionView!
+    @IBOutlet weak var userHandCardDescription: UILabel!
     
-        var cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14,card15,card16, card17, card18, card19, card20]
+    var cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14,card15,card16, card17, card18, card19, card20]
     
     var userHand = [CardModel]()
     var ratedCards = [CardModel]()
     var measuringPoint = 0
+    var userScore = 0
     
     
     func deckGeneration ( cardsArray: inout [CardModel], deskSize : Int) -> [CardModel] {
@@ -37,56 +39,14 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         return playerDecArray
     }
     
-    func painAssessment(_ indexOfRight: Int) -> Int {
-        measuringPoint = userHand[0].pointsOfPain
-        
-        switch indexOfRight {
-            
-        case 0:
-            print("left")
-            if measuringPoint < ratedCards[0].pointsOfPain {
-                ratedCards.insert(userHand[0], at: 0)
-            }
-            else {
-                measuringPoint = (ratedCards[0].pointsOfPain + measuringPoint)/2
-                userHand[0].pointsOfPain = measuringPoint
-            }
-            
-        case ratedCards.count :
-            print("right")
-            if measuringPoint > ratedCards[ratedCards.count-1].pointsOfPain {
-                ratedCards.insert(userHand[0], at: ratedCards.count)
-            }
-            else {
-                measuringPoint = (ratedCards[ratedCards.count-1].pointsOfPain + measuringPoint)/2
-                userHand[0].pointsOfPain = measuringPoint
-            }
-            
-        default:
-            print("between")
-            let left = ratedCards[indexOfRight - 1].pointsOfPain
-            let right = ratedCards[indexOfRight].pointsOfPain
-            if left < measuringPoint && measuringPoint < right {
-                ratedCards.insert(userHand[0], at: indexOfRight)
-            }
-            else {
-                measuringPoint = (left + right + measuringPoint)/3
-                userHand[0].pointsOfPain = measuringPoint
-            }
-            
-        }
-        
-        userHand.removeFirst()
-        return measuringPoint
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userHand = deckGeneration(cardsArray: &cardsArray, deskSize: 13)
         ratedCards  = deckGeneration(cardsArray: &userHand, deskSize: 3).sorted { $0 < $1}
-        
-//        Enabling Drag and Drop in collection views
+        userHandCardDescription.text = userHand[0].cardDescription
+        print(userHand[0].pointsOfPain)
+        //        Enabling Drag and Drop in collection views
         ratedCardsCollectionView.dropDelegate = self
         userHandCollectionView.dragDelegate = self
         ratedCardsCollectionView.dragDelegate = self
@@ -116,7 +76,7 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
             
             cell.ratedCardsCollectionViewCellIcon.image = ratedCards [indexPath.item].cardIcon
             //TODO: convert int to string to fit label
-            var pointsOfPainString = String(ratedCards[indexPath.row].pointsOfPain)
+            let pointsOfPainString = String(ratedCards[indexPath.row].pointsOfPain)
             cell.ratedCardsCollectionViewCellLabel.text = pointsOfPainString
             return cell
         }
@@ -152,15 +112,76 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
         let destinationIndexPath = coordinator.destinationIndexPath ?? IndexPath(item: 0, section: 0)
         
         let items = coordinator.items
+        
+        for item in items {
             
-            for item in items {
-                item.dragItem.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: {(newImage, error)  -> Void in
+            item.dragItem.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: {(newImage, error)  -> Void in
+                self.measuringPoint = self.userHand[0].pointsOfPain
+                
+                switch destinationIndexPath.row{
+                case 0:
+                    print("left")
+                    if self.measuringPoint <= self.ratedCards[0].pointsOfPain {
+                        self.ratedCards.insert(self.userHand[0], at: destinationIndexPath.row)
+                        
+                        DispatchQueue.main.async {
+                            self.ratedCardsCollectionView.insertItems(at: [destinationIndexPath])
+                        }
+                    } else {
+                        self.userHand[0].pointsOfPain = (self.ratedCards[0].pointsOfPain + self.measuringPoint)/2
+                        print("recalculated: \(self.userHand[0].pointsOfPain)")
+                    }
                     
-                    self.ratedCards.insert(self.userHand[0], at: destinationIndexPath.row)
+                case self.ratedCards.count :
+                    print("right")
+                    if self.measuringPoint >= self.ratedCards[self.ratedCards.count-1].pointsOfPain {
+                        self.ratedCards.insert(self.userHand[0], at: destinationIndexPath.row)
+                        
+                        DispatchQueue.main.async {
+                            self.ratedCardsCollectionView.insertItems(at: [destinationIndexPath])
+                        }
+                        
+                    } else {
+                        self.userHand[0].pointsOfPain = (self.ratedCards[self.ratedCards.count-1].pointsOfPain + self.measuringPoint)/2
+                        print("recalculated: \(self.userHand[0].pointsOfPain)")
+                    }
+                    
+                default :
+                    print("between")
+                    let left = self.ratedCards[destinationIndexPath.row - 1].pointsOfPain
+                    let right = self.ratedCards[destinationIndexPath.row].pointsOfPain
+                    if left <= self.measuringPoint && self.measuringPoint <= right {
+                        self.ratedCards.insert(self.userHand[0], at: destinationIndexPath.row)
+                        
+                        DispatchQueue.main.async {
+                            self.ratedCardsCollectionView.insertItems(at: [destinationIndexPath])
+                        }
+                    } else {
+                        self.userHand[0].pointsOfPain = (left + right + self.measuringPoint)/3
+                        print("recalculated: \(self.userHand[0].pointsOfPain)")
+                        
+                    }
+                    
+                    
+                }
+                
+                if self.userHand.count != 1 {
+                    self.userHand.removeFirst()
                     DispatchQueue.main.async {
-                        self.ratedCardsCollectionView.insertItems(at: [destinationIndexPath])
+                        self.userHandCollectionView.reloadData()
+                        self.userHandCardDescription.text = self.userHand[0].cardDescription
+                    }
+                    
+                } else {
+                    DispatchQueue.main.async {
+                        self.userHandCollectionView.isHidden = true
+                        self.userHandCardDescription.text = "user score is: \(self.userScore)% "
                     }
                 }
+                self.userScore = (self.ratedCards.count - 3) * 10
+                print(self.userHand[0].pointsOfPain)
+                
+            }
             )}
     }
     
