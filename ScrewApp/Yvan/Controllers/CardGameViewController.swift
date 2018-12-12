@@ -86,17 +86,21 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         userHand = deckGeneration(cardsArray: &cardsArray, deskSize: 13)
         ratedCards  = deckGeneration(cardsArray: &userHand, deskSize: 3).sorted { $0 < $1}
         
-//        ratedCardsCollectionView.dropDelegate = self
-//        userHandCollectionView.dragDelegate = self
-//        ratedCardsCollectionView.dragDelegate = self
+//        Enabling Drag and Drop in collection views
+        ratedCardsCollectionView.dropDelegate = self
+        userHandCollectionView.dragDelegate = self
+        ratedCardsCollectionView.dragDelegate = self
+        userHandCollectionView.dragInteractionEnabled = true
         
     }
     
 }
 
 
-extension CardGameViewController: UICollectionViewDelegate, UICollectionViewDataSource/*, UICollectionViewDropDelegate, UICollectionViewDragDelegate*/
+extension CardGameViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDropDelegate, UICollectionViewDragDelegate
 {
+    
+    //    COLLECTION VIEW POPULATING
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         if collectionView == self.ratedCardsCollectionView { return ratedCards.count }
@@ -112,7 +116,7 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
             
             cell.ratedCardsCollectionViewCellIcon.image = ratedCards [indexPath.item].cardIcon
             //TODO: convert int to string to fit label
-//            cell.ratedCardsCollectionViewCellLabel.text = ratedCards [indexPath.item].pointsOfPain as! String
+            //            cell.ratedCardsCollectionViewCellLabel.text = ratedCards [indexPath.item].pointsOfPain as! String
             return cell
         }
         else {
@@ -126,7 +130,7 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     
-//    Drag and drop related functions
+    //    Drag related functions
     
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem]
     {
@@ -136,53 +140,45 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator)
-    {
-//        let destinationIndexPath = coordinator.destinationIndexPath ?? IndexPath(item: 0, section: 0)
-//
-//        switch coordinator.proposal.operation {
-//        case .move:
-//
-//            let items = coordinator.items
-//
-//            for item in items {
-//                item.dragItem.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: {(newImage, error)  -> Void in
-//
-////                    if let image = newImage as? CardModel {
-////                        if image.size.width > 200
-////                        {
-////                            image = self.scaleImage(image: image, width: 200)
-////                        }
-//
-//                        self.ratedCards.insert(image, at: destinationIndexPath.row)
-//
-//                        print("number of lala \(self.RatedCardsCollectionView.numberOfItems(inSection: 0))")
-//
-//                        DispatchQueue.main.async {
-//                            self.RatedCardsCollectionView.insertItems(at: [destinationIndexPath])
-//                        }
-//                    }
-//                })
-//            }
-//        default: return
-//        }
-
+    //    Drop related functions
+    
+    func collectionView(_ collectionView: UICollectionView, canHandle session: UIDropSession) -> Bool {
+        return session.hasItemsConforming(toTypeIdentifiers: [kUTTypeImage as String])
     }
     
-//    func scaleImage (image:UIImage, width: CGFloat) -> UIImage {
-//        let oldWidth = image.size.width
-//        let scaleFactor = width / oldWidth
-//
-//        let newHeight = image.size.height * scaleFactor
-//        let newWidth = oldWidth * scaleFactor
-//
-//        UIGraphicsBeginImageContext(CGSize(width:newWidth, height:newHeight))
-//        image.draw(in: CGRect(x:0, y:0, width:newWidth, height:newHeight))
-//        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//        return newImage!
-//    }
-//
+    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator)
+    {
+        let destinationIndexPath = coordinator.destinationIndexPath ?? IndexPath(item: 0, section: 0)
+        
+        let items = coordinator.items
+            
+            for item in items {
+                item.dragItem.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: {(newImage, error)  -> Void in
+                    
+                    self.ratedCards.insert(self.userHand[0], at: destinationIndexPath.row)
+                    
+                    DispatchQueue.main.async {
+                        self.ratedCardsCollectionView.insertItems(at: [destinationIndexPath])
+                    }
+                }
+            )}
+    }
+    
+    
+    //    func scaleImage (image:UIImage, width: CGFloat) -> UIImage {
+    //        let oldWidth = image.size.width
+    //        let scaleFactor = width / oldWidth
+    //
+    //        let newHeight = image.size.height * scaleFactor
+    //        let newWidth = oldWidth * scaleFactor
+    //
+    //        UIGraphicsBeginImageContext(CGSize(width:newWidth, height:newHeight))
+    //        image.draw(in: CGRect(x:0, y:0, width:newWidth, height:newHeight))
+    //        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+    //        UIGraphicsEndImageContext()
+    //        return newImage!
+    //    }
+    //
     
     func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate
         session: UIDropSession, withDestinationIndexPath destinationIndexPath:
