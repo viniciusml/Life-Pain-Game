@@ -55,8 +55,8 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="shL-BB-MCm"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VwP-1k-5Wo"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vbm-HQ-fim"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ee3-sj-2gD"/>
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try to guess how users rated this fail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPp-oE-A8I">
@@ -111,8 +111,8 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="FXk-Nv-OIz"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="aMX-gG-SYJ"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="nRh-yh-SXj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="XfL-bw-Ayi"/>
                                 </connections>
                             </collectionView>
                         </subviews>
@@ -120,9 +120,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="RatedCardsCollectionView" destination="g56-Ii-7oo" id="RZ7-tE-BJc"/>
-                        <outlet property="ratedCardsCollectionView" destination="g56-Ii-7oo" id="OYg-t0-p8J"/>
-                        <outlet property="userHandCollectionView" destination="9Y0-1W-gtd" id="Pbz-eF-dOF"/>
+                        <outlet property="ratedCardsCollectionView" destination="g56-Ii-7oo" id="eDW-OM-c5E"/>
+                        <outlet property="userHandCollectionView" destination="9Y0-1W-gtd" id="g5Q-Ev-Nhi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
