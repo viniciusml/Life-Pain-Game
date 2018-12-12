@@ -120,9 +120,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="RatedCardsCollectionView" destination="g56-Ii-7oo" id="RZ7-tE-BJc"/>
-                        <outlet property="ratedCardsCollectionView" destination="g56-Ii-7oo" id="OYg-t0-p8J"/>
-                        <outlet property="userHandCollectionView" destination="9Y0-1W-gtd" id="Pbz-eF-dOF"/>
+                        <outlet property="RatedCardsCollectionView" destination="g56-Ii-7oo" id="iLW-js-Zvc"/>
+                        <outlet property="UserHandCollectionView" destination="9Y0-1W-gtd" id="cwR-bB-pRa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

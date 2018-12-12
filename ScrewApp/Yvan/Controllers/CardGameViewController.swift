@@ -14,7 +14,7 @@ class CardGameViewController: UIViewController, UIDropInteractionDelegate {
     @IBOutlet weak var UserHandCollectionView: UICollectionView!
     @IBOutlet weak var RatedCardsCollectionView: UICollectionView!
     
-    var cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14,card15,card16, card17, card18, card19, card20]
+        var cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14,card15,card16, card17, card18, card19, card20]
     
     var userHand = [CardModel]()
     var ratedCards = [CardModel]()
@@ -84,14 +84,12 @@ class CardGameViewController: UIViewController, UIDropInteractionDelegate {
         userHand = deckGeneration(cardsArray: &cardsArray, deskSize: 13)
         ratedCards  = deckGeneration(cardsArray: &userHand, deskSize: 3).sorted { $0 < $1}
         
-        UserHandCollectionView.dropDelegate = self
         RatedCardsCollectionView.dropDelegate = self
         UserHandCollectionView.dragDelegate = self
         RatedCardsCollectionView.dragDelegate = self
-        
+        UserHandCollectionView.dragInteractionEnabled = true
         // Do any additional setup after loading the view.
     }
-    
     
     /*
      // MARK: - Navigation
