@@ -28,7 +28,7 @@ class FirstScreenViewController: UIViewController {
         recognizer.setTranslation(CGPoint.zero, in: self.cardToDrag)
         
         if recognizer.state == UIGestureRecognizer.State.ended {
-            if(cardToDrag.frame.minY > startGameSpot.frame.minY && cardToDrag.frame.maxY < startGameSpot.frame.maxY){
+            if(cardToDrag.frame.minY < startGameSpot.frame.maxY){
                 
                 
                 self.performSegue(withIdentifier: "CardGameSegue", sender: self)
