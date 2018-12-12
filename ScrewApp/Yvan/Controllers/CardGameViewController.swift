@@ -156,7 +156,6 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
                 item.dragItem.itemProvider.loadObject(ofClass: UIImage.self, completionHandler: {(newImage, error)  -> Void in
                     
                     self.ratedCards.insert(self.userHand[0], at: destinationIndexPath.row)
-                    
                     DispatchQueue.main.async {
                         self.ratedCardsCollectionView.insertItems(at: [destinationIndexPath])
                     }
