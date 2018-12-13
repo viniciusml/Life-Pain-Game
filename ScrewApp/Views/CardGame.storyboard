@@ -157,6 +157,17 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="XfL-bw-Ayi"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bww-Xh-jU2">
+                                <rect key="frame" x="287" y="35" width="53" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DTJ-9j-Esv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -168,9 +179,11 @@
                         <outlet property="ratedCardsCollectionView" destination="g56-Ii-7oo" id="eDW-OM-c5E"/>
                         <outlet property="userHandCardDescription" destination="Qr9-ug-sNp" id="btp-Lp-m9f"/>
                         <outlet property="userHandCollectionView" destination="9Y0-1W-gtd" id="g5Q-Ev-Nhi"/>
+                        <segue destination="pfj-nn-sby" kind="unwind" identifier="firstScreenSegue" unwindAction="unwindToVC1WithSegue:" id="a0V-Bj-xOh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="pfj-nn-sby" userLabel="Exit" sceneMemberID="exit"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="1FT-w8-ffu"/>
             </objects>
             <point key="canvasLocation" x="135.19999999999999" y="132.68365817091455"/>
