@@ -13,9 +13,12 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
     
     
     @IBOutlet weak var userHandCollectionView: UICollectionView!
-    
     @IBOutlet weak var ratedCardsCollectionView: UICollectionView!
     @IBOutlet weak var userHandCardDescription: UILabel!
+    
+    @IBOutlet weak var ratedCardPressedIcon: UIImageView!
+    @IBOutlet weak var pointsOfPainLabel: UILabel!
+    @IBOutlet weak var ratedCardPressedCell: UITableViewCell!
     
     var cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14,card15,card16, card17, card18, card19, card20]
     
@@ -51,6 +54,8 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         userHandCollectionView.dragDelegate = self
         ratedCardsCollectionView.dragDelegate = self
         userHandCollectionView.dragInteractionEnabled = true
+        
+        
         
     }
     
@@ -220,20 +225,37 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
     }
 }
 
-    //    LONG GESTURE:
+//    LONG GESTURE:
 extension CardGameViewController: RatedCardCollectionViewCellDelegate {
     func longTapped(sender: UILongPressGestureRecognizer, cell: RatedCardsCollectionViewCell) {
         
         guard let indexPath = ratedCardsCollectionView.indexPath(for: cell) else {
             return
         }
-        
-        if sender.state == .began {
-            print(ratedCards[indexPath.row].cardDescription)
-            print("card pressed")
-        }
-        if sender.state == .ended {
-            print("card released")
+        if self.userHand.count != 1 {
+            if sender.state == .began {
+                DispatchQueue.main.async {
+                    self.userHandCollectionView.isHidden = true
+                    self.userHandCardDescription.text = self.ratedCards[indexPath.row].cardDescription
+                    self.ratedCardPressedIcon.isHidden = false
+                    self.ratedCardPressedIcon.image = self.ratedCards[indexPath.row].cardIcon
+                    self.pointsOfPainLabel.isHidden = false
+                    self.pointsOfPainLabel.text = String(self.ratedCards[indexPath.row].pointsOfPain)
+                    self.ratedCardPressedCell.isHidden = false
+                    
+                    
+                }
+            }
+            if sender.state == .ended {
+                DispatchQueue.main.async {
+                    self.userHandCardDescription.text = self.userHand[0].cardDescription
+                    self.ratedCardPressedIcon.isHidden = true
+                    self.pointsOfPainLabel.isHidden = true
+                    self.userHandCollectionView.isHidden = false
+                    self.ratedCardPressedCell.isHidden = true
+                    
+                }
+            }
         }
     }
 }

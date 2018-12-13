@@ -14,6 +14,7 @@
 		C84052D721BE968200A8FF78 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052D621BE968200A8FF78 /* CardModel.swift */; };
 		C84052D921BEE46F00A8FF78 /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052D821BEE46F00A8FF78 /* CardFactory.swift */; };
 		C84052DB21BEE65300A8FF78 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052DA21BEE65300A8FF78 /* Constants.swift */; };
+		CF72802A21C192CB002E8DEB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72802921C192CB002E8DEB /* CloudKit.framework */; };
 		CF9A353021B93DA500F739B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A352F21B93DA500F739B3 /* AppDelegate.swift */; };
 		CF9A353221B93DA500F739B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A353121B93DA500F739B3 /* ViewController.swift */; };
 		CF9A353721B93DA500F739B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9A353621B93DA500F739B3 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		CFBFA76D21C02EA5008B3E2D /* CardGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBFA76C21C02EA5008B3E2D /* CardGame.storyboard */; };
 		CFBFA77021C04E70008B3E2D /* RatedCardsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA76E21C04E70008B3E2D /* RatedCardsCollectionViewCell.swift */; };
 		CFBFA77121C04E70008B3E2D /* userHandCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBFA76F21C04E70008B3E2D /* userHandCollectionViewCell.swift */; };
+		CFF3201421C2541B008E7BB5 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CFF3201321C2541B008E7BB5 /* Raleway-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		C84052D621BE968200A8FF78 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		C84052D821BEE46F00A8FF78 /* CardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
 		C84052DA21BEE65300A8FF78 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CF72802721C192C7002E8DEB /* ScrewApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScrewApp.entitlements; sourceTree = "<group>"; };
+		CF72802921C192CB002E8DEB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CF9A352C21B93DA500F739B3 /* ScrewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9A352F21B93DA500F739B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF9A353121B93DA500F739B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +44,7 @@
 		CFBFA76C21C02EA5008B3E2D /* CardGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CardGame.storyboard; sourceTree = "<group>"; };
 		CFBFA76E21C04E70008B3E2D /* RatedCardsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatedCardsCollectionViewCell.swift; sourceTree = "<group>"; };
 		CFBFA76F21C04E70008B3E2D /* userHandCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userHandCollectionViewCell.swift; sourceTree = "<group>"; };
+		CFF3201321C2541B008E7BB5 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF72802A21C192CB002E8DEB /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +66,7 @@
 				CFBFA76E21C04E70008B3E2D /* RatedCardsCollectionViewCell.swift */,
 				8F7080D421C1244D00393478 /* FirstScreen.storyboard */,
 				CFBFA76C21C02EA5008B3E2D /* CardGame.storyboard */,
+				CFF3201221C25391008E7BB5 /* fonts */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -84,11 +91,20 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		CF72802821C192CB002E8DEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF72802921C192CB002E8DEB /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF9A352321B93DA500F739B3 = {
 			isa = PBXGroup;
 			children = (
 				CF9A352E21B93DA500F739B3 /* ScrewApp */,
 				CF9A352D21B93DA500F739B3 /* Products */,
+				CF72802821C192CB002E8DEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +119,7 @@
 		CF9A352E21B93DA500F739B3 /* ScrewApp */ = {
 			isa = PBXGroup;
 			children = (
+				CF72802721C192C7002E8DEB /* ScrewApp.entitlements */,
 				8F7080D621C1246300393478 /* Views */,
 				C84052D521BE958900A8FF78 /* Controllers */,
 				C84052D421BE958000A8FF78 /* Models */,
@@ -113,6 +130,14 @@
 				CF9A353B21B93DA500F739B3 /* Info.plist */,
 			);
 			path = ScrewApp;
+			sourceTree = "<group>";
+		};
+		CFF3201221C25391008E7BB5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CFF3201321C2541B008E7BB5 /* Raleway-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +172,14 @@
 				TargetAttributes = {
 					CF9A352B21B93DA500F739B3 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -174,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF9A353A21B93DA500F739B3 /* LaunchScreen.storyboard in Resources */,
+				CFF3201421C2541B008E7BB5 /* Raleway-Regular.ttf in Resources */,
 				8F7080D521C1244D00393478 /* FirstScreen.storyboard in Resources */,
 				CFBFA76D21C02EA5008B3E2D /* CardGame.storyboard in Resources */,
 				CF9A353721B93DA500F739B3 /* Assets.xcassets in Resources */,
@@ -334,6 +368,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ScrewApp/ScrewApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RDT43VM57B;
 				INFOPLIST_FILE = ScrewApp/Info.plist;
@@ -352,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ScrewApp/ScrewApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RDT43VM57B;
 				INFOPLIST_FILE = ScrewApp/Info.plist;
