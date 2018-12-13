@@ -13,10 +13,18 @@ class FirstScreenViewController: UIViewController {
     @IBOutlet weak var cardToDrag: UIImageView!
     @IBOutlet weak var optionsSpot: UIImageView!
     
+    //    UNWIND SEGUE FOR MENU BUTTON:
+    @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        centerCard()
     }
     
     @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
@@ -60,5 +68,9 @@ class FirstScreenViewController: UIViewController {
         }
         
         
+    }
+    
+    func centerCard () {
+                cardToDrag.center = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2)
     }
 }
