@@ -19,6 +19,7 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
     @IBOutlet weak var ratedCardPressedIcon: UIImageView!
     @IBOutlet weak var pointsOfPainLabel: UILabel!
     @IBOutlet weak var ratedCardPressedCell: UITableViewCell!
+    @IBOutlet weak var cardsLeftLable: UILabel!
     
     var cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14,card15,card16, card17, card18, card19, card20]
     
@@ -178,6 +179,7 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
                     DispatchQueue.main.async {
                         self.userHandCollectionView.reloadData()
                         self.userHandCardDescription.text = self.userHand[0].cardDescription
+                        self.cardsLeftLable.text = "Cards left: \(self.userHand.count)"
                     }
                     
                 } else {
