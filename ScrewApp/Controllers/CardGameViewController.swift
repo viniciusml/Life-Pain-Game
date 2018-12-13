@@ -21,6 +21,7 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
     @IBOutlet weak var ratedCardPressedCell: UITableViewCell!
     @IBOutlet weak var cardsLeftLable: UILabel!
     
+    
     var cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14,card15,card16, card17, card18, card19, card20]
     
     var userHand = [CardModel]()
@@ -207,7 +208,7 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
                 } else {
                     DispatchQueue.main.async {
                         self.userHandCollectionView.isHidden = true
-                        self.userHandCardDescription.text = "user score is: \(self.userScore)% "
+                        self.userHandCardDescription.text = "\(self.userScore)% of failures you perceive in the same way as the majority of users."
                     }
                 }
                 self.userScore = (self.ratedCards.count - 3) * 10

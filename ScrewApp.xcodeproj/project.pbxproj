@@ -14,7 +14,6 @@
 		C84052D721BE968200A8FF78 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052D621BE968200A8FF78 /* CardModel.swift */; };
 		C84052D921BEE46F00A8FF78 /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052D821BEE46F00A8FF78 /* CardFactory.swift */; };
 		C84052DB21BEE65300A8FF78 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052DA21BEE65300A8FF78 /* Constants.swift */; };
-		CF72802A21C192CB002E8DEB /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF72802921C192CB002E8DEB /* CloudKit.framework */; };
 		CF9A353021B93DA500F739B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A352F21B93DA500F739B3 /* AppDelegate.swift */; };
 		CF9A353221B93DA500F739B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A353121B93DA500F739B3 /* ViewController.swift */; };
 		CF9A353721B93DA500F739B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9A353621B93DA500F739B3 /* Assets.xcassets */; };
@@ -34,7 +33,6 @@
 		C84052D821BEE46F00A8FF78 /* CardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
 		C84052DA21BEE65300A8FF78 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CF72802721C192C7002E8DEB /* ScrewApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScrewApp.entitlements; sourceTree = "<group>"; };
-		CF72802921C192CB002E8DEB /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		CF9A352C21B93DA500F739B3 /* ScrewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9A352F21B93DA500F739B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF9A353121B93DA500F739B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF72802A21C192CB002E8DEB /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +91,6 @@
 		CF72802821C192CB002E8DEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CF72802921C192CB002E8DEB /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -177,7 +173,7 @@
 								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
