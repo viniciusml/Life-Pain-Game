@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--First Screen View Controller-->
         <scene sceneID="Wrs-KP-n7s">
@@ -18,30 +23,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="0Lq-Zm-O73">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="0Lq-Zm-O73">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="startgame" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-ep-LmS">
-                                <rect key="frame" x="95" y="227" width="184" height="213"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Op1-Ih-dCa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startbutton" translatesAutoresizingMaskIntoConstraints="NO" id="Zip-jb-Mvm">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7oS-Ej-S6Z">
+                                        <rect key="frame" x="187.5" y="145" width="0.0" height="0.0"/>
+                                        <subviews>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" WANNA PLAY?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S73-OV-8w2">
+                                                <rect key="frame" x="0.0" y="0.0" width="194.5" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="25"/>
+                                                <color key="textColor" red="0.16862745100000001" green="0.18039215689999999" blue="0.2901960784" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbI-KE-4ZH">
+                                                <rect key="frame" x="0.0" y="0.0" width="194.5" height="0.0"/>
+                                                <string key="text">Drag and drop this card in 
+your desired option</string>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
+                                                <color key="textColor" red="0.027449999999999999" green="0.21176" blue="0.25881999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Zip-jb-Mvm" firstAttribute="leading" secondItem="Op1-Ih-dCa" secondAttribute="leading" id="8uI-NK-YFs"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zip-jb-Mvm" secondAttribute="trailing" id="FPF-fg-qiY"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="o9S-pw-Xxs">
+                                <rect key="frame" x="0.0" y="483.5" width="375" height="183.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Xfz-uh-DI0">
+                                        <rect key="frame" x="108.5" y="0.0" width="158" height="57.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" WANNA PLAY?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC5-pn-jeZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="20"/>
+                                                <color key="textColor" red="0.16862745098039217" green="0.1803921568627451" blue="0.29019607843137252" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvZ-0m-fmv">
+                                                <rect key="frame" x="0.0" y="26.5" width="158" height="31"/>
+                                                <string key="text">Drag and drop this card in 
+your desired option</string>
+                                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="13"/>
+                                                <color key="textColor" red="0.027449999999999999" green="0.21176" blue="0.25881999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="e0A-P9-ObD">
+                                        <rect key="frame" x="0.0" y="61.5" width="375" height="122"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="e0A-P9-ObD" secondAttribute="trailing" id="V9R-YB-Snd"/>
+                                    <constraint firstItem="e0A-P9-ObD" firstAttribute="leading" secondItem="o9S-pw-Xxs" secondAttribute="leading" id="dNB-Lx-XzW"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START GAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Am1-69-cWh">
+                                <rect key="frame" x="0.0" y="45" width="375" height="29"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="19"/>
+                                <color key="textColor" red="0.40784313725490196" green="0.43137254901960786" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHARE YOUR FAILURE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fM1-KR-SqK">
+                                <rect key="frame" x="0.0" y="595" width="375" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="19"/>
+                                <color key="textColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startgame" translatesAutoresizingMaskIntoConstraints="NO" id="C2q-ep-LmS">
+                                <rect key="frame" x="65.5" y="197" width="244" height="273"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="LMW-ep-j44" appends="YES" id="PaL-wm-r3I"/>
                                 </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="e0A-P9-ObD">
-                                <rect key="frame" x="0.0" y="565" width="375" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="startbutton" translatesAutoresizingMaskIntoConstraints="NO" id="Zip-jb-Mvm">
-                                <rect key="frame" x="-5" y="0.0" width="380" height="102"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MTW-1D-lTr" firstAttribute="bottom" secondItem="o9S-pw-Xxs" secondAttribute="bottom" id="4pT-7B-CL6"/>
+                            <constraint firstItem="MTW-1D-lTr" firstAttribute="trailing" secondItem="o9S-pw-Xxs" secondAttribute="trailing" id="6IO-IA-Atd"/>
+                            <constraint firstItem="fM1-KR-SqK" firstAttribute="trailing" secondItem="Am1-69-cWh" secondAttribute="trailing" id="7Ny-3b-tL4"/>
+                            <constraint firstItem="0Lq-Zm-O73" firstAttribute="top" secondItem="Hn7-BP-QNG" secondAttribute="top" id="9zB-DP-RXQ"/>
+                            <constraint firstItem="C2q-ep-LmS" firstAttribute="centerX" secondItem="0Lq-Zm-O73" secondAttribute="centerX" id="F4c-NU-EkP"/>
+                            <constraint firstItem="Am1-69-cWh" firstAttribute="top" secondItem="MTW-1D-lTr" secondAttribute="top" constant="25" id="Jjq-Il-DFz"/>
+                            <constraint firstItem="fM1-KR-SqK" firstAttribute="leading" secondItem="o9S-pw-Xxs" secondAttribute="leading" id="OQU-d3-K63"/>
+                            <constraint firstItem="Am1-69-cWh" firstAttribute="centerY" secondItem="Zip-jb-Mvm" secondAttribute="centerY" id="OYG-bi-tLa"/>
+                            <constraint firstItem="MTW-1D-lTr" firstAttribute="trailing" secondItem="Op1-Ih-dCa" secondAttribute="trailing" id="S0p-Ap-n6g"/>
+                            <constraint firstItem="0Lq-Zm-O73" firstAttribute="bottom" secondItem="MTW-1D-lTr" secondAttribute="bottom" id="S2J-Sb-Sl0"/>
+                            <constraint firstItem="Op1-Ih-dCa" firstAttribute="leading" secondItem="MTW-1D-lTr" secondAttribute="leading" id="Wed-iw-vFy"/>
+                            <constraint firstItem="0Lq-Zm-O73" firstAttribute="leading" secondItem="MTW-1D-lTr" secondAttribute="leading" id="ZWY-6i-GDw"/>
+                            <constraint firstItem="C2q-ep-LmS" firstAttribute="centerY" secondItem="0Lq-Zm-O73" secondAttribute="centerY" id="cH6-vm-un4"/>
+                            <constraint firstItem="Op1-Ih-dCa" firstAttribute="top" secondItem="Hn7-BP-QNG" secondAttribute="top" id="gdy-uc-Miy"/>
+                            <constraint firstItem="fM1-KR-SqK" firstAttribute="centerY" secondItem="e0A-P9-ObD" secondAttribute="centerY" id="qae-Hq-FCv"/>
+                            <constraint firstItem="o9S-pw-Xxs" firstAttribute="leading" secondItem="Hn7-BP-QNG" secondAttribute="leading" id="tJB-h2-3kX"/>
+                            <constraint firstItem="fM1-KR-SqK" firstAttribute="leading" secondItem="Am1-69-cWh" secondAttribute="leading" id="vfP-bm-b1C"/>
+                            <constraint firstItem="fM1-KR-SqK" firstAttribute="trailing" secondItem="o9S-pw-Xxs" secondAttribute="trailing" id="vui-sq-9bW"/>
+                            <constraint firstItem="0Lq-Zm-O73" firstAttribute="trailing" secondItem="MTW-1D-lTr" secondAttribute="trailing" id="xwv-Wj-ZWf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MTW-1D-lTr"/>
                     </view>
                     <connections>
@@ -58,7 +148,7 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-92" y="118.29085457271366"/>
+            <point key="canvasLocation" x="-95.625" y="116.19718309859155"/>
         </scene>
         <!--CardGame-->
         <scene sceneID="pOa-nd-42U">
