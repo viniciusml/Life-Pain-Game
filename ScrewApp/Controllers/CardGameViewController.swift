@@ -61,25 +61,12 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         
     }
     
-    //    NAVIGATION MENU BUTTON:
+    //    PERFORM SEGUE TO GAME MENU:
     
     @IBAction func menuButton(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Game Paused", message: "Would you like to quit game?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { action in
-            
-            print("cancel")
-            
-            
-        }))
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-            self.performSegue(withIdentifier: "firstScreenSegue", sender: self)
-            
-            print("ok")
-            
-            
-        }))
-        self.present(alert, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "GameMenuSegue", sender: self)
+        
     }
     
     
