@@ -27,8 +27,6 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
     var userHand = [CardModel]()
     var ratedCards = [CardModel]()
     var measuringPoint = 0
-    var userScore = 0
-    
     
     func deckGeneration ( cardsArray: inout [CardModel], deskSize : Int) -> [CardModel] {
         var playerDecArray = [CardModel]()
@@ -208,10 +206,10 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
                 } else {
                     DispatchQueue.main.async {
                         self.userHandCollectionView.isHidden = true
-                        self.userHandCardDescription.text = "\(self.userScore)% of failures you perceive in the same way as the majority of users."
+                        self.userHandCardDescription.text = "\(GameSession.sharedInstance.score)% of failures you perceive in the same way as the majority of users."
                     }
                 }
-                self.userScore = (self.ratedCards.count - 3) * 10
+                GameSession.sharedInstance.score = (self.ratedCards.count - 3) * 10
                 print(self.userHand[0].pointsOfPain)
                 
             }

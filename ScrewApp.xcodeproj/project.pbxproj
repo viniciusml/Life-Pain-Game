@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E20281421C3A7DF006C732E /* ScoreCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E20281321C3A7DF006C732E /* ScoreCalculation.swift */; };
 		8F7080D321C123D000393478 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7080D221C123D000393478 /* FirstScreenViewController.swift */; };
 		8F7080D521C1244D00393478 /* FirstScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F7080D421C1244D00393478 /* FirstScreen.storyboard */; };
 		C826F48E21BFC6E600F75251 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826F48D21BFC6E600F75251 /* CardData.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E20281321C3A7DF006C732E /* ScoreCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreCalculation.swift; sourceTree = "<group>"; };
 		8F7080D221C123D000393478 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		8F7080D421C1244D00393478 /* FirstScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstScreen.storyboard; sourceTree = "<group>"; };
 		C826F48D21BFC6E600F75251 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
@@ -56,6 +58,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E20280F21C3A76E006C732E /* Roberta */ = {
+			isa = PBXGroup;
+			children = (
+				8E20281221C3A797006C732E /* Controllers */,
+				8E20281121C3A790006C732E /* Views */,
+				8E20281021C3A784006C732E /* Models */,
+			);
+			path = Roberta;
+			sourceTree = "<group>";
+		};
+		8E20281021C3A784006C732E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E20281321C3A7DF006C732E /* ScoreCalculation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8E20281121C3A790006C732E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E20281221C3A797006C732E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		8F7080D621C1246300393478 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +149,7 @@
 		CF9A352E21B93DA500F739B3 /* ScrewApp */ = {
 			isa = PBXGroup;
 			children = (
+				8E20280F21C3A76E006C732E /* Roberta */,
 				CF72802721C192C7002E8DEB /* ScrewApp.entitlements */,
 				8F7080D621C1246300393478 /* Views */,
 				C84052D521BE958900A8FF78 /* Controllers */,
@@ -222,6 +257,7 @@
 				C826F48E21BFC6E600F75251 /* CardData.swift in Sources */,
 				C84052D721BE968200A8FF78 /* CardModel.swift in Sources */,
 				C84052D321BE94C900A8FF78 /* CardGameViewController.swift in Sources */,
+				8E20281421C3A7DF006C732E /* ScoreCalculation.swift in Sources */,
 				C84052D921BEE46F00A8FF78 /* CardFactory.swift in Sources */,
 				CFBFA77021C04E70008B3E2D /* RatedCardsCollectionViewCell.swift in Sources */,
 				CF9A353021B93DA500F739B3 /* AppDelegate.swift in Sources */,
