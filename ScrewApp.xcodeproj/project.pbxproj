@@ -15,6 +15,8 @@
 		C84052D721BE968200A8FF78 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052D621BE968200A8FF78 /* CardModel.swift */; };
 		C84052D921BEE46F00A8FF78 /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052D821BEE46F00A8FF78 /* CardFactory.swift */; };
 		C84052DB21BEE65300A8FF78 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052DA21BEE65300A8FF78 /* Constants.swift */; };
+		C859A0B621C3D4D600D742EB /* ResultsScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C859A0B521C3D4D600D742EB /* ResultsScreenController.swift */; };
+		C859A0B821C3D4DE00D742EB /* ResultsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C859A0B721C3D4DE00D742EB /* ResultsScreen.storyboard */; };
 		CF9A353021B93DA500F739B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A352F21B93DA500F739B3 /* AppDelegate.swift */; };
 		CF9A353221B93DA500F739B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9A353121B93DA500F739B3 /* ViewController.swift */; };
 		CF9A353721B93DA500F739B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9A353621B93DA500F739B3 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		C84052D621BE968200A8FF78 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		C84052D821BEE46F00A8FF78 /* CardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
 		C84052DA21BEE65300A8FF78 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C859A0B521C3D4D600D742EB /* ResultsScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsScreenController.swift; sourceTree = "<group>"; };
+		C859A0B721C3D4DE00D742EB /* ResultsScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResultsScreen.storyboard; sourceTree = "<group>"; };
 		CF72802721C192C7002E8DEB /* ScrewApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScrewApp.entitlements; sourceTree = "<group>"; };
 		CF9A352C21B93DA500F739B3 /* ScrewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF9A352F21B93DA500F739B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 		8E20281121C3A790006C732E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C859A0B721C3D4DE00D742EB /* ResultsScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 		8E20281221C3A797006C732E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C859A0B521C3D4D600D742EB /* ResultsScreenController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 				CF9A353A21B93DA500F739B3 /* LaunchScreen.storyboard in Resources */,
 				CFF3201421C2541B008E7BB5 /* Raleway-Regular.ttf in Resources */,
 				8F7080D521C1244D00393478 /* FirstScreen.storyboard in Resources */,
+				C859A0B821C3D4DE00D742EB /* ResultsScreen.storyboard in Resources */,
 				CFBFA76D21C02EA5008B3E2D /* CardGame.storyboard in Resources */,
 				CF9A353721B93DA500F739B3 /* Assets.xcassets in Resources */,
 			);
@@ -262,6 +269,7 @@
 				CFBFA77021C04E70008B3E2D /* RatedCardsCollectionViewCell.swift in Sources */,
 				CF9A353021B93DA500F739B3 /* AppDelegate.swift in Sources */,
 				C84052DB21BEE65300A8FF78 /* Constants.swift in Sources */,
+				C859A0B621C3D4D600D742EB /* ResultsScreenController.swift in Sources */,
 				8F7080D321C123D000393478 /* FirstScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

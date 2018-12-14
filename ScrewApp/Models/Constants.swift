@@ -12,4 +12,6 @@ enum Constants {
     
     static let CARD_DECK_SIZE = 13
     static let CARD_DESCRIPTION_MAX_SIZE = 180
+    
+    
 }

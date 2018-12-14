@@ -12,10 +12,16 @@ class GameSession {
     
 //    private var user : UserModel
     var score: Int
+    var wrongGuesses: Int = 0
     static var sharedInstance = GameSession()
     
     
     init() { score = 0 }
     
 //    func getGameData() -> GameData {}
+    
+    func increaseErrors()
+    {
+        wrongGuesses = wrongGuesses + 1
+    }
 }

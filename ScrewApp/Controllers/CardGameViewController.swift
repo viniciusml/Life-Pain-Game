@@ -160,6 +160,7 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
                     } else {
                         self.userHand[0].pointsOfPain = (self.ratedCards[0].pointsOfPain + self.measuringPoint)/2
                         print("recalculated: \(self.userHand[0].pointsOfPain)")
+                        GameSession.sharedInstance.increaseErrors()
                     }
                     
                 case self.ratedCards.count :
@@ -174,6 +175,7 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
                     } else {
                         self.userHand[0].pointsOfPain = (self.ratedCards[self.ratedCards.count-1].pointsOfPain + self.measuringPoint)/2
                         print("recalculated: \(self.userHand[0].pointsOfPain)")
+                        GameSession.sharedInstance.increaseErrors()
                     }
                     
                 default :
@@ -189,6 +191,7 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
                     } else {
                         self.userHand[0].pointsOfPain = (left + right + self.measuringPoint)/3
                         print("recalculated: \(self.userHand[0].pointsOfPain)")
+                        GameSession.sharedInstance.increaseErrors()
                         
                     }
                     
