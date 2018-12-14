@@ -184,14 +184,21 @@
                         <outlet property="ratedCardsCollectionView" destination="g56-Ii-7oo" id="eDW-OM-c5E"/>
                         <outlet property="userHandCardDescription" destination="Qr9-ug-sNp" id="btp-Lp-m9f"/>
                         <outlet property="userHandCollectionView" destination="9Y0-1W-gtd" id="g5Q-Ev-Nhi"/>
-                        <segue destination="pfj-nn-sby" kind="unwind" identifier="firstScreenSegue" unwindAction="unwindToVC1WithSegue:" id="a0V-Bj-xOh"/>
+                        <segue destination="mM5-kJ-iZI" kind="presentation" identifier="GameMenuSegue" id="Eyc-XO-KK7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="pfj-nn-sby" userLabel="Exit" sceneMemberID="exit"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="1FT-w8-ffu"/>
             </objects>
             <point key="canvasLocation" x="135.19999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--GameMenu-->
+        <scene sceneID="mMm-FQ-UXl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameMenu" referencedIdentifier="GameMenu" id="mM5-kJ-iZI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n9n-p4-gyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="71"/>
         </scene>
     </scenes>
     <resources>

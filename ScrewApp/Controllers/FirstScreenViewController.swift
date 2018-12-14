@@ -13,8 +13,8 @@ class FirstScreenViewController: UIViewController {
     @IBOutlet weak var cardToDrag: UIImageView!
     @IBOutlet weak var optionsSpot: UIImageView!
     
-    //    UNWIND SEGUE FOR MENU BUTTON:
-    @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
+    //    UNWIND SEGUE TO BE USED IN MENU BUTTON:
+    @IBAction func unwindToFirstScreen(segue:UIStoryboardSegue) { }
     
     override func viewDidLoad() {
         super.viewDidLoad()
