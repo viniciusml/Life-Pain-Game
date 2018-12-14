@@ -11,17 +11,11 @@ import UIKit
 class GameSession {
     
 //    private var user : UserModel
-    private var score: Int
-    
+    var score: Int
     static var sharedInstance = GameSession()
     
-    init() {
-        score = 0
-    }
     
-    func getScore () -> Int {
-        return score
-    }
+    init() { score = 0 }
     
 //    func getGameData() -> GameData {}
 }
