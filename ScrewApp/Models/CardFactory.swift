@@ -25,8 +25,8 @@ public class CardFactory {
         var cardsArray = [CardModel] ()
         
         for i in 0 ... quantity {
-            print("\(i)")
-            cardsArray.append(CardModel (cardIcon: cardIconData[i], pointsOfPain: cardPointsOfPainData[i], cardDescription: cardDescriptionData[i]))
+            let random = Int.random(in: 0...19)
+            cardsArray.append(CardModel (cardIcon: cardIconData[random], pointsOfPain: cardPointsOfPainData[random], cardDescription: cardDescriptionData[random]))
         }
         
         return cardsArray

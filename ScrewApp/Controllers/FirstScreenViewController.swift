@@ -18,7 +18,6 @@ class FirstScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        CardFactory.sharedInstance.createCards(quantity: 10)
         // Do any additional setup after loading the view.
     }
     
