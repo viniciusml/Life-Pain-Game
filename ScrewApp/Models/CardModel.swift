@@ -10,6 +10,23 @@ import Foundation
 import UIKit
 
 struct CardModel: Equatable, Comparable {
+
+//  TODO: implement cardId
+//    var cardId : String
+    
+    var cardIcon : UIImage
+    var pointsOfPain : Int
+    var cardDescription: String
+    
+    
+    init (cardIcon : UIImage, pointsOfPain : Int, cardDescription : String)
+    {
+        self.cardIcon = cardIcon
+        self.pointsOfPain = pointsOfPain
+        self.cardDescription = cardDescription
+  
+    }
+    
     static func < (lhs: CardModel, rhs: CardModel) -> Bool {
         return lhs.pointsOfPain < rhs.pointsOfPain
     }
@@ -26,18 +43,4 @@ struct CardModel: Equatable, Comparable {
         return lhs.pointsOfPain >= rhs.pointsOfPain
     }
     
-//  TODO: implement cardId
-//    var cardId : String
-    
-    var cardIcon : UIImage
-    var pointsOfPain : Int
-    var cardDescription: String
-    
-    init (cardIcon : UIImage, pointsOfPain : Int, cardDescription : String)
-    {
-        self.cardIcon = cardIcon
-        self.pointsOfPain = pointsOfPain
-        self.cardDescription = cardDescription
-  
-    }
 }

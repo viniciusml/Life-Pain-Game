@@ -21,8 +21,8 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
     @IBOutlet weak var ratedCardPressedCell: UITableViewCell!
     @IBOutlet weak var cardsLeftLable: UILabel!
     
-    
-    var cardsArray = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14,card15,card16, card17, card18, card19, card20]
+    //
+    var cardsDeck = CardFactory.sharedInstance.createCards(quantity: Constants.CARD_DECK_SIZE)
     
     var userHand = [CardModel]()
     var ratedCards = [CardModel]()
@@ -30,10 +30,23 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
     var userScore = 0
     
     
-    func deckGeneration ( cardsArray: inout [CardModel], deskSize : Int) -> [CardModel] {
-        var playerDecArray = [CardModel]()
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
         
-        while playerDecArray.count != deskSize {
+        userHand = deckGeneration(cardsArray: &cardsDeck, deckSize: Constants.CARD_DECK_SIZE)
+        ratedCards  = deckGeneration(cardsArray: &userHand, deckSize: 3).sorted { $0 < $1}
+        userHandCardDescription.text = userHand[0].cardDescription
+        print(userHand[0].pointsOfPain)
+        //        Enabling Drag and Drop in collection views
+        setDelegates()
+        
+    }
+    
+    func deckGeneration ( cardsArray: inout [CardModel], deckSize : Int) -> [CardModel]
+    {
+        var playerDecArray = [CardModel]()
+        while playerDecArray.count != deckSize {
             let randomCard = cardsArray.randomElement()!
             if let i = cardsArray.index(of: randomCard) {
                 cardsArray.remove(at: i)
@@ -44,31 +57,20 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         return playerDecArray
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        userHand = deckGeneration(cardsArray: &cardsArray, deskSize: 13)
-        ratedCards  = deckGeneration(cardsArray: &userHand, deskSize: 3).sorted { $0 < $1}
-        userHandCardDescription.text = userHand[0].cardDescription
-        print(userHand[0].pointsOfPain)
-        //        Enabling Drag and Drop in collection views
+    func setDelegates ()
+    {
         ratedCardsCollectionView.dropDelegate = self
         userHandCollectionView.dragDelegate = self
         ratedCardsCollectionView.dragDelegate = self
         userHandCollectionView.dragInteractionEnabled = true
-        
-        
-        
     }
     
-    //    PERFORM SEGUE TO GAME MENU:
-    
+    //    NAVIGATION MENU BUTTON:
     @IBAction func menuButton(_ sender: Any) {
         
         self.performSegue(withIdentifier: "GameMenuSegue", sender: self)
         
     }
-    
     
 }
 
