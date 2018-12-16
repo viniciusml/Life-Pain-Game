@@ -196,7 +196,8 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
                     DispatchQueue.main.async {
                         self.userHandCollectionView.isHidden = true
                         self.userHandCardDescription.text = "\(self.userScore)% of failures you perceive in the same way as the majority of users."
-                    }
+                        self.cardsLeftLable.text = "No cards left"
+                    } 
                 }
                 self.userScore = (self.ratedCards.count - 3) * 10
                 print(self.userHand[0].pointsOfPain)
