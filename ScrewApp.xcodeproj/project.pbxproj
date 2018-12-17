@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8F7080D321C123D000393478 /* FirstScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7080D221C123D000393478 /* FirstScreenViewController.swift */; };
 		8F7080D521C1244D00393478 /* FirstScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F7080D421C1244D00393478 /* FirstScreen.storyboard */; };
+		C806795421C7AC2900DB7EC2 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C806795321C7AC2900DB7EC2 /* TutorialViewController.swift */; };
+		C806795621C7AC7700DB7EC2 /* Tutorial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C806795521C7AC7700DB7EC2 /* Tutorial.storyboard */; };
 		C826F48E21BFC6E600F75251 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C826F48D21BFC6E600F75251 /* CardData.swift */; };
 		C84052D321BE94C900A8FF78 /* CardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052D221BE94C900A8FF78 /* CardGameViewController.swift */; };
 		C84052D721BE968200A8FF78 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84052D621BE968200A8FF78 /* CardModel.swift */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		8F7080D221C123D000393478 /* FirstScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenViewController.swift; sourceTree = "<group>"; };
 		8F7080D421C1244D00393478 /* FirstScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FirstScreen.storyboard; sourceTree = "<group>"; };
+		C806795321C7AC2900DB7EC2 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		C806795521C7AC7700DB7EC2 /* Tutorial.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tutorial.storyboard; sourceTree = "<group>"; };
 		C826F48D21BFC6E600F75251 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		C84052D221BE94C900A8FF78 /* CardGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameViewController.swift; sourceTree = "<group>"; };
 		C84052D621BE968200A8FF78 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 				CFBFA76E21C04E70008B3E2D /* RatedCardsCollectionViewCell.swift */,
 				8F7080D421C1244D00393478 /* FirstScreen.storyboard */,
 				CFBFA76C21C02EA5008B3E2D /* CardGame.storyboard */,
+				C806795521C7AC7700DB7EC2 /* Tutorial.storyboard */,
 				CFF3201221C25391008E7BB5 /* fonts */,
 			);
 			path = Views;
@@ -84,6 +89,7 @@
 			children = (
 				C84052D221BE94C900A8FF78 /* CardGameViewController.swift */,
 				8F7080D221C123D000393478 /* FirstScreenViewController.swift */,
+				C806795321C7AC2900DB7EC2 /* TutorialViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,6 +212,7 @@
 				CFF3201421C2541B008E7BB5 /* Raleway-Regular.ttf in Resources */,
 				8F7080D521C1244D00393478 /* FirstScreen.storyboard in Resources */,
 				CFBFA76D21C02EA5008B3E2D /* CardGame.storyboard in Resources */,
+				C806795621C7AC7700DB7EC2 /* Tutorial.storyboard in Resources */,
 				CF9A353721B93DA500F739B3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,6 +233,7 @@
 				CFBFA77021C04E70008B3E2D /* RatedCardsCollectionViewCell.swift in Sources */,
 				CF9A353021B93DA500F739B3 /* AppDelegate.swift in Sources */,
 				C84052DB21BEE65300A8FF78 /* Constants.swift in Sources */,
+				C806795421C7AC2900DB7EC2 /* TutorialViewController.swift in Sources */,
 				8F7080D321C123D000393478 /* FirstScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
