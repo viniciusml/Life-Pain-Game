@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-let cardIconData : [UIImage] = [
+public var cardIconData : [UIImage] = [
     UIImage(named: "cardIcon1")!,
     UIImage(named: "cardIcon2")!,
     UIImage(named: "cardIcon3")!,
@@ -32,9 +32,9 @@ let cardIconData : [UIImage] = [
     UIImage(named: "cardIcon20")!,
 ]
 
-let cardPointsOfPainData : [Int] = [80, 80, 93, 73, 86, 56, 66, 76, 43, 5, 66, 46, 76, 4, 12, 24, 58, 36, 81, 7]
+public var cardPointsOfPainData : [Int] = [80, 80, 93, 73, 86, 56, 66, 76, 43, 5, 66, 46, 76, 4, 12, 24, 58, 36, 81, 7]
 
-let cardDescriptionData : [String] = [
+public var cardDescriptionData : [String] = [
     "You have an exam and study a lot and when the exam starts you notice you studied the wrong book pages",
     "Your parents trusted you but you feel like you have let them down ",
     "You graduated at the university just to realise you didn’t like what you were doing",
