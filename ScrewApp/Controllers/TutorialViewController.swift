@@ -8,6 +8,7 @@
 
 import UIKit
 import MobileCoreServices
+import CoreGraphics
 
 class TutorialViewController: UIViewController {
     
@@ -20,6 +21,8 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var pointsOfPainLabel: UILabel!
     @IBOutlet weak var ratedCardPressedCell: UITableViewCell!
     @IBOutlet weak var cardsLeftLable: UILabel!
+    @IBOutlet weak var tutorialTipLabel: UILabel!
+
     
     //
     var cardsDeck = CardFactory.sharedInstance.createCards(quantity: Constants.CARD_DECK_SIZE)
@@ -28,7 +31,12 @@ class TutorialViewController: UIViewController {
     var ratedCards = [CardModel]()
     var measuringPoint = 0
     var userScore = 0
+    var tutorialPageCounter = 0
     
+    let tutorialLabelStrings = [
+    "Each card describes a painful situation. Try to guess its value in Points of Pain by dragging and dropping the card in the deck.",
+    "There’s no wrong guess! Each time you choose a different value for a card, WeFail will update the score for the whole community."
+    ]
     
     override func viewDidLoad()
     {
@@ -55,6 +63,61 @@ class TutorialViewController: UIViewController {
         }
         
         return playerDecArray
+    }
+    
+    @IBAction func tutorialSkipButtonListener (_ sender: UIButton)
+    {
+        tutorialPageCounter = tutorialPageCounter + 1
+        loadTutorialPage()
+    }
+    
+    func loadTutorialPage ()
+    {
+        switch tutorialPageCounter {
+            case 0:
+                tutorialTipLabel.text = tutorialLabelStrings [0]
+                break
+            
+            case 1:
+                let handIcon = UIImageView( frame: CGRect (x: 55, y: 31, width: 76, height: 86) )
+                handIcon.image = UIImage (named: "hand-cursor")
+                self.view.addSubview(handIcon)
+                handIcon.contentMode = UIView.ContentMode.scaleToFill
+                centerHandIcon(icon: handIcon)
+//                while tutorialPageCounter == 1 { animateHandIcon(icon: handIcon)}
+                animateHandIcon(icon: handIcon)
+            case 2:
+                tutorialTipLabel.text = tutorialLabelStrings [1]
+                break
+            case 3:
+                self.performSegue(withIdentifier: "CardGameTutorialSegue", sender: self)
+                break
+            default:
+                break
+            
+        }
+        
+    }
+    
+    func animateHandIcon (icon: UIImageView)
+    {
+        UIView.animate(
+            withDuration: 2.5,
+            delay: 0.0,
+            options: .curveEaseInOut,
+            animations: {
+                icon.frame.origin.x = self.ratedCardsCollectionView.frame.origin.x
+                icon.frame.origin.y = self.ratedCardsCollectionView.frame.origin.y
+        },
+            completion: { (finished: Bool) in
+                icon.isHidden = true
+        })
+    }
+    
+    func centerHandIcon (icon: UIImageView)
+    {
+        icon.frame.origin.x = self.ratedCardPressedCell.frame.origin.x
+        icon.frame.origin.y = self.ratedCardPressedCell.frame.origin.y
     }
     
 }
