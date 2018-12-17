@@ -22,11 +22,20 @@ public class CardFactory {
     }
     
     func createCards (quantity : Int) -> [CardModel] {
-        var cardsArray = [CardModel] ()
+        //Copy cards data into cardsDataCopyArray and shuffle
+        var cardsDataCopy = [CardModel] ()
+        for i in 0 ... cardIconData.count - 1 {
+            cardsDataCopy.append (CardModel (
+                cardIcon: cardIconData [i],
+                pointsOfPain: cardPointsOfPainData [i],
+                cardDescription: cardDescriptionData [i]))
+        }
+        cardsDataCopy.shuffle()
         
+        //Copy first n shuffled cards into cardsArray and return it
+        var cardsArray = [CardModel] ()
         for i in 0 ... quantity {
-            let random = Int.random(in: 0...19)
-            cardsArray.append(CardModel (cardIcon: cardIconData[random], pointsOfPain: cardPointsOfPainData[random], cardDescription: cardDescriptionData[random]))
+            cardsArray.append (cardsDataCopy [i])
         }
         
         return cardsArray
@@ -34,3 +43,4 @@ public class CardFactory {
     
     
 }
+
