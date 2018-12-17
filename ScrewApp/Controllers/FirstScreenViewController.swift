@@ -8,17 +8,22 @@
 
 import UIKit
 
-class FirstScreenViewController: UIViewController {
+class FirstScreenViewController: UIViewController
+{
     @IBOutlet weak var startGameSpot: UIImageView!
     @IBOutlet weak var cardToDrag: UIImageView!
     @IBOutlet weak var optionsSpot: UIImageView!
     
-    //    UNWIND SEGUE TO BE USED IN MENU BUTTON:
-    @IBAction func unwindToFirstScreen(segue:UIStoryboardSegue) { }
+    static let defaults = UserDefaults.standard
+    let firstLaunch : Bool = isFirstLaunch()
     
-    override func viewDidLoad() {
+    //    UNWIND SEGUE FOR MENU BUTTON:
+    @IBAction func unwindToVC1(segue:UIStoryboardSegue) { }
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -26,7 +31,8 @@ class FirstScreenViewController: UIViewController {
         centerCard()
     }
     
-    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
+    @IBAction func handlePan(recognizer:UIPanGestureRecognizer)
+    {
         let translation = recognizer.translation(in: self.cardToDrag)
         if let view = recognizer.view {
             view.center = CGPoint(x:view.center.x + translation.x,
@@ -36,9 +42,12 @@ class FirstScreenViewController: UIViewController {
         
         if recognizer.state == UIGestureRecognizer.State.ended {
             if(cardToDrag.frame.minY < startGameSpot.frame.maxY){
-                
-                
+                if (firstLaunch){
+                    self.performSegue(withIdentifier: "TutorialSegue", sender: self)
+
+                } else {
                 self.performSegue(withIdentifier: "CardGameSegue", sender: self)
+                }
             } else {
                 
                 
@@ -69,7 +78,23 @@ class FirstScreenViewController: UIViewController {
         
     }
     
-    func centerCard () {
+    func centerCard ()
+    {
                 cardToDrag.center = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2)
+    }
+    
+    static func isFirstLaunch () -> Bool
+    {
+        if ( defaults.integer (forKey: "launchesNumber") == 0)
+        {
+            defaults.set(1, forKey: "launchesNumber")
+            return true
+        } else {
+            defaults.set( (
+                defaults.integer(forKey: "launchesNumber") + 1),
+                          forKey: "launchesNumber")
+            return false
+        }
+        
     }
 }
