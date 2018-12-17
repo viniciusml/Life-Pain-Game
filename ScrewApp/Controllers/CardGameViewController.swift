@@ -23,6 +23,7 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
     
     //
     var cardsDeck = CardFactory.sharedInstance.createCards(quantity: Constants.CARD_DECK_SIZE)
+
     
     var userHand = [CardModel]()
     var ratedCards = [CardModel]()
@@ -33,13 +34,28 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+        for i in cardsDeck {
+            print(i.cardDescription)
+        }
         userHand = deckGeneration(cardsArray: &cardsDeck, deckSize: Constants.CARD_DECK_SIZE)
         ratedCards  = deckGeneration(cardsArray: &userHand, deckSize: 3).sorted { $0 < $1}
         userHandCardDescription.text = userHand[0].cardDescription
         print(userHand[0].pointsOfPain)
         //        Enabling Drag and Drop in collection views
         setDelegates()
+        setLayout(in: ratedCardsCollectionView)
+    }
+    
+    func setLayout(in cv: UICollectionView) {
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 105 , height: 122 )
+        layout.minimumInteritemSpacing = 30 * (3 - 1)
+        layout.scrollDirection = .horizontal
+        let leftInset = (view.bounds.width - ((layout.itemSize.width * 3 ) + layout.minimumInteritemSpacing)) / 2
+        let rightInset = leftInset
+        layout.sectionInset = UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
+        cv.collectionViewLayout = layout
         
     }
     

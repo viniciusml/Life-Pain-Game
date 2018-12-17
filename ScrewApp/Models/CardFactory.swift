@@ -24,7 +24,7 @@ public class CardFactory {
     func createCards (quantity : Int) -> [CardModel] {
         var cardsArray = [CardModel] ()
         
-        for i in 0 ... quantity {
+        for _ in 0 ... quantity {
             let random = Int.random(in: 0...19)
             cardsArray.append(CardModel (cardIcon: cardIconData[random], pointsOfPain: cardPointsOfPainData[random], cardDescription: cardDescriptionData[random]))
         }
