@@ -44,6 +44,17 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         //        Enabling Drag and Drop in collection views
         setDelegates()
         setLayout(in: ratedCardsCollectionView)
+        
+        // Setting UIView with shadow:
+        let layer = UIView()
+        layer.frame = CGRect(x: userHandCollectionView.frame.minX, y: userHandCollectionView.frame.minY, width: 184, height: 213)
+        layer.backgroundColor = .white
+        layer.layer.cornerRadius = 7.5
+        layer.layer.shadowOffset = CGSize(width: 0, height: 15)
+        layer.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
+        layer.layer.shadowOpacity = 1
+        layer.layer.shadowRadius = 30
+        view.insertSubview(layer, belowSubview: userHandCollectionView)
     }
     
     func setLayout(in cv: UICollectionView) {
@@ -115,6 +126,18 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
             
             cell.delegate = self
             
+            // Setting shadows for rated cards:
+            cell.contentView.layer.cornerRadius = 7.5
+            cell.contentView.layer.borderWidth = 1.0
+            cell.contentView.layer.borderColor = UIColor.clear.cgColor
+            cell.contentView.layer.masksToBounds = true
+            cell.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: 15)
+            cell.layer.shadowRadius = 30
+            cell.layer.shadowOpacity = 1.0
+            cell.layer.masksToBounds = false
+            cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, cornerRadius: cell.contentView.layer.cornerRadius).cgPath
+            
             return cell
         }
         else {
@@ -136,6 +159,20 @@ extension CardGameViewController: UICollectionViewDelegate, UICollectionViewData
         let dragItem = UIDragItem(itemProvider: provider)
         return [dragItem]
         
+    }
+    
+    //    Setting previews when drag starts:
+    func collectionView(_ collectionView: UICollectionView,
+                        dragPreviewParametersForItemAt indexPath: IndexPath) -> UIDragPreviewParameters? {
+        
+        let parameters = UIDragPreviewParameters()
+        let rect = CGRect(x: 38, y: 20, width: userHandCollectionView.frame.width/1.7, height: userHandCollectionView.frame.height/2)
+        
+        
+        parameters.visiblePath = UIBezierPath(roundedRect: rect, cornerRadius: 15)
+        parameters.backgroundColor = UIColor.clear
+        
+        return parameters
     }
     
     //    Drop related functions
