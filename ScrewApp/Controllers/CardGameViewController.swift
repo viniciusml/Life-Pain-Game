@@ -34,9 +34,6 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        for i in cardsDeck {
-            print(i.cardDescription)
-        }
         userHand = deckGeneration(cardsArray: &cardsDeck, deckSize: Constants.CARD_DECK_SIZE)
         ratedCards  = deckGeneration(cardsArray: &userHand, deckSize: 3).sorted { $0 < $1}
         userHandCardDescription.text = userHand[0].cardDescription
@@ -50,6 +47,8 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 105 , height: 122 )
+        print("width:\(view.bounds.width) height:\(view.bounds.height)")
+        print("item width:\(layout.itemSize.width) item height:\(layout.itemSize.height)")
         layout.minimumInteritemSpacing = 30 * (3 - 1)
         layout.scrollDirection = .horizontal
         let leftInset = (view.bounds.width - ((layout.itemSize.width * 3 ) + layout.minimumInteritemSpacing)) / 2
