@@ -47,7 +47,8 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         
         // Setting UIView with shadow:
         let layer = UIView()
-        layer.frame = CGRect(x: userHandCollectionView.frame.minX, y: userHandCollectionView.frame.minY, width: 184, height: 213)
+        
+        layer.frame = CGRect(x: userHandCollectionView.frame.origin.x, y: userHandCollectionView.frame.origin.y, width: 194, height: 223)
         layer.backgroundColor = .white
         layer.layer.cornerRadius = 7.5
         layer.layer.shadowOffset = CGSize(width: 0, height: 15)
@@ -55,6 +56,10 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         layer.layer.shadowOpacity = 1
         layer.layer.shadowRadius = 30
         view.insertSubview(layer, belowSubview: userHandCollectionView)
+        
+        layer.centerXAnchor.constraint(equalTo: userHandCollectionView.centerXAnchor).isActive = true
+        layer.centerYAnchor.constraint(equalTo: userHandCollectionView.centerYAnchor).isActive = true
+        
     }
     
     func setLayout(in cv: UICollectionView) {

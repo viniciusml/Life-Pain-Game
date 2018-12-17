@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,29 +20,62 @@
             <objects>
                 <viewController restorationIdentifier="GameMenu" storyboardIdentifier="GameMenu" modalPresentationStyle="overCurrentContext" id="hpE-yd-jDz" customClass="GameMenuViewController" customModule="ScrewApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CRO-m2-dth">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-jw-Fkk">
-                                <rect key="frame" x="125" y="127" width="137" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="20"/>
-                                <state key="normal" title="Resume Game"/>
-                                <connections>
-                                    <action selector="resumeGame:" destination="hpE-yd-jDz" eventType="touchUpInside" id="o5J-PK-0gL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4c-NF-lXQ">
-                                <rect key="frame" x="144" y="275" width="99" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="20"/>
-                                <state key="normal" title="Quit Game"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4c-NF-lXQ">
+                                <rect key="frame" x="13" y="373" width="388" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="fqR-sB-5uo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="jlv-z5-SY1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="25"/>
+                                <state key="normal" title="Quit Game">
+                                    <color key="titleColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="quitGame:" destination="hpE-yd-jDz" eventType="touchUpInside" id="VEg-hz-xpP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-jw-Fkk">
+                                <rect key="frame" x="13" y="226" width="388" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="9zq-Zx-ubH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="25"/>
+                                <state key="normal" title="Resume Game">
+                                    <color key="titleColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resumeGame:" destination="hpE-yd-jDz" eventType="touchUpInside" id="o5J-PK-0gL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="0.75302333047945214" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bBA-bJ-ia2" firstAttribute="trailing" secondItem="T4c-NF-lXQ" secondAttribute="trailing" constant="13" id="GGS-6d-d60"/>
+                            <constraint firstItem="T4c-NF-lXQ" firstAttribute="leading" secondItem="bBA-bJ-ia2" secondAttribute="leading" constant="13" id="I5o-SJ-Fh5"/>
+                            <constraint firstItem="T4c-NF-lXQ" firstAttribute="top" secondItem="9kn-jw-Fkk" secondAttribute="bottom" constant="111" id="OCz-Wn-vCS"/>
+                            <constraint firstItem="bBA-bJ-ia2" firstAttribute="trailing" secondItem="9kn-jw-Fkk" secondAttribute="trailing" constant="13" id="OQw-kG-MzX"/>
+                            <constraint firstItem="bBA-bJ-ia2" firstAttribute="trailing" secondItem="T4c-NF-lXQ" secondAttribute="trailing" constant="13" id="Ous-OK-She"/>
+                            <constraint firstItem="T4c-NF-lXQ" firstAttribute="leading" secondItem="bBA-bJ-ia2" secondAttribute="leading" constant="13" id="TcU-FW-g4m"/>
+                            <constraint firstItem="T4c-NF-lXQ" firstAttribute="top" secondItem="9kn-jw-Fkk" secondAttribute="bottom" constant="111" id="fkE-lg-Ljt"/>
+                            <constraint firstItem="9kn-jw-Fkk" firstAttribute="top" secondItem="bBA-bJ-ia2" secondAttribute="top" constant="182" id="l3T-h2-zr6"/>
+                            <constraint firstItem="bBA-bJ-ia2" firstAttribute="bottom" secondItem="T4c-NF-lXQ" secondAttribute="bottom" constant="453" id="sDR-Ce-UwK"/>
+                            <constraint firstItem="9kn-jw-Fkk" firstAttribute="leading" secondItem="bBA-bJ-ia2" secondAttribute="leading" constant="13" id="zZZ-Fb-ght"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bBA-bJ-ia2"/>
                     </view>
                     <connections>
