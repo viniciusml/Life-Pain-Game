@@ -34,7 +34,7 @@ public class CardFactory {
         
         //Copy first n shuffled cards into cardsArray and return it
         var cardsArray = [CardModel] ()
-        for i in 0 ... quantity {
+        for i in 0 ... 12 {
             cardsArray.append (cardsDataCopy [i])
         }
         

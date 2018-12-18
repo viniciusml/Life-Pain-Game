@@ -23,16 +23,9 @@ public var cardIconData : [UIImage] = [
     UIImage(named: "cardIcon11")!,
     UIImage(named: "cardIcon12")!,
     UIImage(named: "cardIcon13")!,
-    UIImage(named: "cardIcon14")!,
-    UIImage(named: "cardIcon15")!,
-    UIImage(named: "cardIcon16")!,
-    UIImage(named: "cardIcon17")!,
-    UIImage(named: "cardIcon18")!,
-    UIImage(named: "cardIcon19")!,
-    UIImage(named: "cardIcon20")!,
 ]
 
-public var cardPointsOfPainData : [Int] = [80, 80, 93, 73, 86, 56, 66, 76, 43, 5, 66, 46, 76, 4, 12, 24, 58, 36, 81, 7]
+public var cardPointsOfPainData : [Int] = [80, 80, 93, 73, 86, 56, 66, 76, 43, 5, 66, 46, 76]
 
 public var cardDescriptionData : [String] = [
     "You have an exam and study a lot and when the exam starts you notice you studied the wrong book pages",
@@ -47,14 +40,7 @@ public var cardDescriptionData : [String] = [
     "You arrive in the airplane, and ask a whole row to stand up because someone is in your seat, just to realize afterwards that your seat was not there",
     "You yell “STOP THE TRAIN, I FORGOT MY BACKPACK INSIDE”, and then, after causing a commotion, you realize it was on your back the whole time",
     "You make a really big and juicy steak of meat to impress your date, but you don’t know he/she is vegan",
-    "You have been working for years in the same company but you never got a promotion",
-    "You have been looking for your glasses for one hour. They were sitting on your head.",
-    "You get ready for your meeting on Wednesday and then you realize it’s just on Tuesday",
-    "You go to the supermarket, put lot of things inside the cart but when you get to the cash you notice you have forgotten your wallet",
-    "You study a lot in order to pass an exam but you fail, while your friend who cheated passes it",
-    "In order to help your friend during the exam you tragically fail yours",
-    "You write all your bad feelings about your boss on a piece of paper and forget it on your desk. Guess someone will be on forced vacations tomorrow",
-    "You wake up early and go to school, just like everyday. And then realize it’s Saturday "
+    "You have been working for years in the same company but you never got a promotion"
 ]
 
 let card1 = CardModel (
@@ -148,52 +134,52 @@ let card13 = CardModel (
 )
 
 
-let card14 = CardModel (
-    cardIcon: UIImage(named: "cardIcon14")!,
-    pointsOfPain: 4,
-    cardDescription: "You have been looking for your glasses for one hour. They were sitting on your head."
-)
-
-
-let card15 = CardModel (
-    cardIcon: UIImage(named: "cardIcon15")!,
-    pointsOfPain: 12,
-    cardDescription: "You get ready for your meeting on Wednesday and then you realize it’s just on Tuesday"
-)
-
-
-let card16 = CardModel (
-    cardIcon: UIImage(named: "cardIcon16")!,
-    pointsOfPain: 24,
-    cardDescription: "You go to the supermarket, put lot of things inside the cart but when you get to the cash you notice you have forgotten your wallet"
-)
-
-
-let card17 = CardModel (
-    cardIcon: UIImage(named: "cardIcon17")!,
-    pointsOfPain: 58,
-    cardDescription: "You study a lot in order to pass an exam but you fail, while your friend who cheated passes it"
-)
-
-
-let card18 = CardModel (
-    cardIcon: UIImage(named: "cardIcon18")!,
-    pointsOfPain: 36,
-    cardDescription: "In order to help your friend during the exam you tragically fail yours"
-)
-
-
-let card19 = CardModel (
-    cardIcon: UIImage(named: "cardIcon19")!,
-    pointsOfPain: 81,
-    cardDescription: "You write all your bad feelings about your boss on a piece of paper and forget it on your desk. Guess someone will be on forced vacations tomorrow"
-)
-
-
-let card20 = CardModel (
-    cardIcon: UIImage(named: "cardIcon20")!,
-    pointsOfPain: 7,
-    cardDescription: "You wake up early and go to school, just like everyday. And then realize it’s Saturday "
-)
+//let card14 = CardModel (
+//    cardIcon: UIImage(named: "cardIcon14")!,
+//    pointsOfPain: 4,
+//    cardDescription: "You have been looking for your glasses for one hour. They were sitting on your head."
+//)
+//
+//
+//let card15 = CardModel (
+//    cardIcon: UIImage(named: "cardIcon15")!,
+//    pointsOfPain: 12,
+//    cardDescription: "You get ready for your meeting on Wednesday and then you realize it’s just on Tuesday"
+//)
+//
+//
+//let card16 = CardModel (
+//    cardIcon: UIImage(named: "cardIcon16")!,
+//    pointsOfPain: 24,
+//    cardDescription: "You go to the supermarket, put lot of things inside the cart but when you get to the cash you notice you have forgotten your wallet"
+//)
+//
+//
+//let card17 = CardModel (
+//    cardIcon: UIImage(named: "cardIcon17")!,
+//    pointsOfPain: 58,
+//    cardDescription: "You study a lot in order to pass an exam but you fail, while your friend who cheated passes it"
+//)
+//
+//
+//let card18 = CardModel (
+//    cardIcon: UIImage(named: "cardIcon18")!,
+//    pointsOfPain: 36,
+//    cardDescription: "In order to help your friend during the exam you tragically fail yours"
+//)
+//
+//
+//let card19 = CardModel (
+//    cardIcon: UIImage(named: "cardIcon19")!,
+//    pointsOfPain: 81,
+//    cardDescription: "You write all your bad feelings about your boss on a piece of paper and forget it on your desk. Guess someone will be on forced vacations tomorrow"
+//)
+//
+//
+//let card20 = CardModel (
+//    cardIcon: UIImage(named: "cardIcon20")!,
+//    pointsOfPain: 7,
+//    cardDescription: "You wake up early and go to school, just like everyday. And then realize it’s Saturday "
+//)
 
 

@@ -57,6 +57,8 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         layer.centerXAnchor.constraint(equalTo: userHandCollectionView.centerXAnchor).isActive = true
         layer.centerYAnchor.constraint(equalTo: userHandCollectionView.centerYAnchor).isActive = true
         
+        
+        
     }
     
     func setLayout(in cv: UICollectionView) {
