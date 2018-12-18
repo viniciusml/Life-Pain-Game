@@ -16,8 +16,6 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var userHandCollectionView: UICollectionView!
     @IBOutlet weak var ratedCardsCollectionView: UICollectionView!
     @IBOutlet weak var userHandCardDescription: UILabel!
-    
-    @IBOutlet weak var ratedCardPressedIcon: UIImageView!
     @IBOutlet weak var pointsOfPainLabel: UILabel!
     @IBOutlet weak var ratedCardPressedCell: UITableViewCell!
     @IBOutlet weak var cardsLeftLable: UILabel!

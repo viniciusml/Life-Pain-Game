@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,119 +18,62 @@
         <scene sceneID="8Mh-az-dFU">
             <objects>
                 <viewController storyboardIdentifier="Tutorial" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3Ol-9d-vIQ" customClass="TutorialViewController" customModule="ScrewApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="2LE-7X-BiE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="b9Q-PT-O1a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="gF4-AV-1fg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="GSw-K4-VzN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7D-tR-75U">
-                                <rect key="frame" x="17" y="91" width="341" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfc-Rg-SgJ">
+                                <rect key="frame" x="17" y="115" width="380" height="85"/>
                                 <color key="tintColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="pdw-uB-M9Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="20"/>
                                 <color key="textColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="RNg-xJ-9Tk">
-                                <rect key="frame" x="18" y="72" width="339" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="Qqb-sn-ycZ">
+                                <rect key="frame" x="18" y="96" width="378" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="8Sr-Kz-QNB"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="5Ab-Tk-eR6">
-                                <rect key="frame" x="18" y="598" width="339" height="2"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="pDE-qK-11r">
+                                <rect key="frame" x="18" y="793" width="378" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="Xcw-m1-k2T"/>
+                                </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ufm-tu-jTa">
-                                <rect key="frame" x="18" y="452" width="339" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hxg-Dz-qlK">
-                                    <size key="itemSize" width="105" height="122"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ratedCardsCollectionViewCell" id="DBZ-SV-QmJ" customClass="RatedCardsCollectionViewCell" customModule="ScrewApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="105" height="122"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="105" height="122"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZb-q8-jtj">
-                                                    <rect key="frame" x="36" y="85" width="33" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="10"/>
-                                                    <color key="textColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7aW-k3-VcI">
-                                                    <rect key="frame" x="26" y="20" width="52" height="59"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <gestureRecognizers/>
-                                        <size key="customSize" width="105" height="122"/>
-                                        <connections>
-                                            <outlet property="RatedCardsCollectionViewCellIcon" destination="7aW-k3-VcI" id="C8t-5q-yLF"/>
-                                            <outlet property="RatedCardsCollectionViewCellLabel" destination="EZb-q8-jtj" id="PWE-je-eOc"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="3Ol-9d-vIQ" id="Olx-3J-qd6"/>
-                                    <outlet property="delegate" destination="3Ol-9d-vIQ" id="XYz-9j-HN5"/>
-                                </connections>
-                            </collectionView>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wf1-ZO-mMa">
-                                <rect key="frame" x="291" y="35" width="45" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="menuButton:" destination="3Ol-9d-vIQ" eventType="touchUpInside" id="Dz5-Xd-TnA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYp-2X-Yz7">
-                                <rect key="frame" x="11" y="103" width="341" height="85"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
-                                <color key="textColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Cei-q8-nc9">
-                                <rect key="frame" x="93" y="188" width="184" height="213"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="e3w-cf-Mwp">
+                                <rect key="frame" x="115" y="230" width="184" height="213"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ypd-IB-Gyg">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="TmB-un-Ya0"/>
+                                    <constraint firstAttribute="height" constant="213" id="qyP-Yq-xJ8"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8gv-BA-j2v">
                                     <size key="itemSize" width="184" height="213"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="userHandCollectionViewCell" id="kAP-WD-dFD" customClass="userHandCollectionViewCell" customModule="ScrewApp" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="userHandCollectionViewCell" id="Fw9-Iq-4ag" customClass="userHandCollectionViewCell" customModule="ScrewApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="184" height="213"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="184" height="213"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4A-N3-SOk">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PdV-4s-ON4">
                                                     <rect key="frame" x="55" y="29" width="76" height="86"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="?  Points of pain      " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nNz-Yx-B97">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="?  Points of pain      " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaI-tM-UWk">
                                                     <rect key="frame" x="20" y="125" width="147" height="82"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
@@ -141,43 +83,109 @@
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="userHandCollectionViewCellIcon" destination="h4A-N3-SOk" id="YOR-k3-zZI"/>
+                                            <outlet property="userHandCollectionViewCellIcon" destination="PdV-4s-ON4" id="PRn-ao-auG"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="3Ol-9d-vIQ" id="hvh-dH-qHs"/>
-                                    <outlet property="delegate" destination="3Ol-9d-vIQ" id="Xl6-re-fNU"/>
-                                </connections>
                             </collectionView>
-                            <tableViewCell hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="153" translatesAutoresizingMaskIntoConstraints="NO" id="pGk-1l-ZId">
-                                <rect key="frame" x="93" y="189" width="184" height="213"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wRj-0Q-754">
+                                <rect key="frame" x="18" y="647" width="378" height="122"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="T7S-wN-GD5"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iCb-fB-bAB">
+                                    <size key="itemSize" width="105" height="122"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ratedCardsCollectionViewCell" id="JhR-Fm-n2c" customClass="RatedCardsCollectionViewCell" customModule="ScrewApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="122"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="105" height="122"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d83-g2-lqc">
+                                                    <rect key="frame" x="18" y="52" width="69" height="31"/>
+                                                    <color key="tintColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gky-D9-Dbm">
+                                                    <rect key="frame" x="28" y="89" width="49" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="lc5-e6-HsQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="10"/>
+                                                    <color key="textColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="d83-g2-lqc" firstAttribute="centerX" secondItem="JhR-Fm-n2c" secondAttribute="centerX" id="Eqx-k4-tUh"/>
+                                            <constraint firstItem="d83-g2-lqc" firstAttribute="centerX" secondItem="gky-D9-Dbm" secondAttribute="centerX" id="OXx-Hg-SLO"/>
+                                            <constraint firstItem="gky-D9-Dbm" firstAttribute="leading" secondItem="JhR-Fm-n2c" secondAttribute="leadingMargin" constant="20" id="TBX-V0-gSK"/>
+                                            <constraint firstItem="d83-g2-lqc" firstAttribute="top" secondItem="JhR-Fm-n2c" secondAttribute="topMargin" id="THe-cP-fEm"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="gky-D9-Dbm" secondAttribute="bottom" id="bkw-QT-qCG"/>
+                                            <constraint firstItem="gky-D9-Dbm" firstAttribute="top" secondItem="d83-g2-lqc" secondAttribute="bottom" constant="6" id="rYe-bu-uCg"/>
+                                            <constraint firstItem="d83-g2-lqc" firstAttribute="leading" secondItem="JhR-Fm-n2c" secondAttribute="leadingMargin" constant="10" id="wam-P8-mFn"/>
+                                        </constraints>
+                                        <size key="customSize" width="105" height="122"/>
+                                        <connections>
+                                            <outlet property="RatedCardsCollectionViewCellIcon" destination="d83-g2-lqc" id="ydm-hn-tZ0"/>
+                                            <outlet property="RatedCardsCollectionViewCellLabel" destination="gky-D9-Dbm" id="f7R-uj-SWd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cards left: 10" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7X9-7r-Fnb">
+                                <rect key="frame" x="124" y="818.5" width="168" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="20"/>
+                                <color key="textColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="213" translatesAutoresizingMaskIntoConstraints="NO" id="f2D-2b-9OT">
+                                <rect key="frame" x="95" y="206" width="184" height="213"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pGk-1l-ZId" id="u1e-vP-9Zv">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f2D-2b-9OT" id="uPl-a3-iUQ">
                                     <rect key="frame" x="0.0" y="0.0" width="184" height="212.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtX-wZ-Pz6">
-                                            <rect key="frame" x="20" y="101" width="147" height="82"/>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jwo-j9-CB2">
+                                            <rect key="frame" x="55" y="31" width="76" height="86"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1v-aI-YX5">
+                                            <rect key="frame" x="20" y="110" width="147" height="82"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
                                             <color key="textColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="opx-7E-UQS">
-                                            <rect key="frame" x="55" y="31" width="76" height="86"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="tintColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oRR-LU-hCv">
-                                <rect key="frame" x="0.0" y="20" width="375" height="128"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y9j-PP-mXI">
+                                <rect key="frame" x="345" y="53" width="51" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="rKB-ve-bLD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="19"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xeg-kl-CIn">
+                                <rect key="frame" x="19" y="106" width="375" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0T4-TL-Fpj">
+                                    <label userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq0-9o-Mu4">
                                         <rect key="frame" x="17" y="35" width="341" height="85"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -187,13 +195,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SfM-Kc-ifN">
-                                <rect key="frame" x="35" y="582" width="305" height="58"/>
+                            <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-mP-Agh">
+                                <rect key="frame" x="56" y="793" width="305" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bj1-VR-dLa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="US1-eS-d20">
                                         <rect key="frame" x="-15" y="22" width="341" height="85"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
@@ -201,7 +209,7 @@
                                         <color key="textColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpH-tw-fMM">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seV-up-vit">
                                         <rect key="frame" x="136" y="13" width="34" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="17"/>
@@ -210,7 +218,7 @@
                                             <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="tutorialSkipButtonListener:" destination="3Ol-9d-vIQ" eventType="touchUpInside" id="Xow-fd-kZ3"/>
+                                            <action selector="tutorialSkipButtonListener:" destination="3Ol-9d-vIQ" eventType="touchUpInside" id="kxQ-V2-5hU"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -218,16 +226,42 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="vX3-O8-OGI"/>
+                        <constraints>
+                            <constraint firstItem="GSw-K4-VzN" firstAttribute="leading" secondItem="iAq-Qe-F7K" secondAttribute="leading" id="0Af-QW-dsO"/>
+                            <constraint firstItem="iAq-Qe-F7K" firstAttribute="trailing" secondItem="wRj-0Q-754" secondAttribute="trailing" constant="18" id="0Sf-p9-8Kq"/>
+                            <constraint firstItem="pDE-qK-11r" firstAttribute="top" secondItem="wRj-0Q-754" secondAttribute="bottom" constant="24" id="9IK-jz-zpl"/>
+                            <constraint firstItem="GSw-K4-VzN" firstAttribute="top" secondItem="b9Q-PT-O1a" secondAttribute="top" id="AeY-uk-quh"/>
+                            <constraint firstItem="Qqb-sn-ycZ" firstAttribute="leading" secondItem="b9Q-PT-O1a" secondAttribute="leading" constant="18" id="U7P-kt-lN4"/>
+                            <constraint firstItem="Qqb-sn-ycZ" firstAttribute="top" secondItem="iAq-Qe-F7K" secondAttribute="top" constant="52" id="VrB-c4-bFL"/>
+                            <constraint firstItem="wfc-Rg-SgJ" firstAttribute="leading" secondItem="iAq-Qe-F7K" secondAttribute="leading" constant="17" id="X5Q-DP-8cb"/>
+                            <constraint firstItem="iAq-Qe-F7K" firstAttribute="bottom" secondItem="7X9-7r-Fnb" secondAttribute="bottom" constant="20" id="Xh8-g1-mxd"/>
+                            <constraint firstAttribute="trailing" secondItem="Qqb-sn-ycZ" secondAttribute="trailing" constant="18" id="aE9-Qc-3Qd"/>
+                            <constraint firstAttribute="bottom" secondItem="GSw-K4-VzN" secondAttribute="bottom" id="bRJ-ga-4X8"/>
+                            <constraint firstItem="iAq-Qe-F7K" firstAttribute="trailing" secondItem="wfc-Rg-SgJ" secondAttribute="trailing" constant="17" id="ek5-CT-dfH"/>
+                            <constraint firstAttribute="trailing" secondItem="pDE-qK-11r" secondAttribute="trailing" constant="18" id="f3S-6T-hB2"/>
+                            <constraint firstItem="wRj-0Q-754" firstAttribute="leading" secondItem="iAq-Qe-F7K" secondAttribute="leading" constant="18" id="gsG-V9-Bw6"/>
+                            <constraint firstItem="7X9-7r-Fnb" firstAttribute="top" secondItem="pDE-qK-11r" secondAttribute="bottom" constant="23.5" id="jIP-eO-JqE"/>
+                            <constraint firstItem="iAq-Qe-F7K" firstAttribute="trailing" secondItem="GSw-K4-VzN" secondAttribute="trailing" id="nNq-f7-QDs"/>
+                            <constraint firstItem="7X9-7r-Fnb" firstAttribute="top" secondItem="pDE-qK-11r" secondAttribute="bottom" constant="23.5" id="qEv-KX-1bs"/>
+                            <constraint firstItem="pDE-qK-11r" firstAttribute="leading" secondItem="b9Q-PT-O1a" secondAttribute="leading" constant="18" id="tme-CK-YgA"/>
+                            <constraint firstItem="Qqb-sn-ycZ" firstAttribute="top" secondItem="y9j-PP-mXI" secondAttribute="bottom" constant="8" id="var-IX-MSV"/>
+                            <constraint firstItem="7X9-7r-Fnb" firstAttribute="leading" secondItem="iAq-Qe-F7K" secondAttribute="leading" constant="124" id="w6C-ic-Eaw"/>
+                            <constraint firstItem="iAq-Qe-F7K" firstAttribute="trailing" secondItem="y9j-PP-mXI" secondAttribute="trailing" constant="18" id="wpv-8U-8Zf"/>
+                            <constraint firstItem="e3w-cf-Mwp" firstAttribute="centerX" secondItem="b9Q-PT-O1a" secondAttribute="centerX" id="xEc-zr-98N"/>
+                            <constraint firstItem="wfc-Rg-SgJ" firstAttribute="top" secondItem="Qqb-sn-ycZ" secondAttribute="bottom" constant="17" id="yvq-p5-jT0"/>
+                            <constraint firstItem="iAq-Qe-F7K" firstAttribute="trailing" secondItem="7X9-7r-Fnb" secondAttribute="trailing" constant="122" id="yvz-rr-rbg"/>
+                            <constraint firstItem="e3w-cf-Mwp" firstAttribute="top" secondItem="wfc-Rg-SgJ" secondAttribute="bottom" constant="30" id="zSZ-WS-1Q8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iAq-Qe-F7K"/>
                     </view>
                     <connections>
-                        <outlet property="pointsOfPainLabel" destination="EtX-wZ-Pz6" id="GUU-2E-BVR"/>
-                        <outlet property="ratedCardPressedCell" destination="pGk-1l-ZId" id="Pb6-OL-1V3"/>
-                        <outlet property="ratedCardPressedIcon" destination="opx-7E-UQS" id="bRG-8X-SVP"/>
-                        <outlet property="ratedCardsCollectionView" destination="ufm-tu-jTa" id="c8t-68-Ro3"/>
-                        <outlet property="tutorialTipLabel" destination="0T4-TL-Fpj" id="A1M-yU-j2T"/>
-                        <outlet property="userHandCardDescription" destination="f7D-tR-75U" id="Bu0-IW-m17"/>
-                        <outlet property="userHandCollectionView" destination="Cei-q8-nc9" id="xbf-6K-TEq"/>
+                        <outlet property="cardsLeftLable" destination="US1-eS-d20" id="j4Z-s2-QRZ"/>
+                        <outlet property="pointsOfPainLabel" destination="C1v-aI-YX5" id="AWt-XQ-RW9"/>
+                        <outlet property="ratedCardPressedCell" destination="f2D-2b-9OT" id="ylk-dW-15R"/>
+                        <outlet property="ratedCardsCollectionView" destination="wRj-0Q-754" id="2ko-Rv-pXX"/>
+                        <outlet property="tutorialTipLabel" destination="cq0-9o-Mu4" id="jOi-DE-W3Q"/>
+                        <outlet property="userHandCardDescription" destination="wfc-Rg-SgJ" id="0Ng-o2-HCN"/>
+                        <outlet property="userHandCollectionView" destination="e3w-cf-Mwp" id="wnV-ij-lqV"/>
                         <segue destination="JYP-18-1m0" kind="presentation" identifier="CardGameTutorialSegue" id="kSC-0N-rL9"/>
                     </connections>
                 </viewController>
