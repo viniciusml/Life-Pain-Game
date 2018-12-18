@@ -63,8 +63,12 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 105 , height: 122 )
+        
+//               layout.itemSize = CGSize(width: layout.itemSize.width * 0.28 , height: layout.itemSize.height * 0.18 )
+        
         print("width:\(view.bounds.width) height:\(view.bounds.height)")
         print("item width:\(layout.itemSize.width) item height:\(layout.itemSize.height)")
+        
         layout.minimumInteritemSpacing = 30 * (3 - 1)
         layout.scrollDirection = .horizontal
         let leftInset = (view.bounds.width - ((layout.itemSize.width * 3 ) + layout.minimumInteritemSpacing)) / 2
@@ -331,3 +335,10 @@ extension CardGameViewController: RatedCardCollectionViewCellDelegate {
         }
     }
 }
+
+//extension CardGameViewController: UICollectionViewDelegateFlowLayout {
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+//    }
+//}
