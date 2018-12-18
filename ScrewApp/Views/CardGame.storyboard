@@ -157,7 +157,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="213" translatesAutoresizingMaskIntoConstraints="NO" id="WNo-AW-gIr">
-                                <rect key="frame" x="95" y="206" width="184" height="213"/>
+                                <rect key="frame" x="115" y="230" width="184" height="213"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WNo-AW-gIr" id="MCu-rB-3Lq">
                                     <rect key="frame" x="0.0" y="0.0" width="184" height="212.5"/>
