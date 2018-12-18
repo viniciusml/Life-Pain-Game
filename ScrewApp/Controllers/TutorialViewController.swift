@@ -16,11 +16,13 @@ class TutorialViewController: UIViewController {
     @IBOutlet weak var userHandCollectionView: UICollectionView!
     @IBOutlet weak var ratedCardsCollectionView: UICollectionView!
     @IBOutlet weak var userHandCardDescription: UILabel!
+    
+    @IBOutlet weak var ratedCardPressedIcon: UIImageView!
     @IBOutlet weak var pointsOfPainLabel: UILabel!
     @IBOutlet weak var ratedCardPressedCell: UITableViewCell!
-    @IBOutlet weak var cardsLeftLable: UILabel!
+    @IBOutlet weak var cardsLeftLabel: UILabel!
     @IBOutlet weak var tutorialTipLabel: UILabel!
-
+    
     
     //
     var cardsDeck = CardFactory.sharedInstance.createCards(quantity: Constants.CARD_DECK_SIZE)
@@ -104,8 +106,8 @@ class TutorialViewController: UIViewController {
             delay: 0.0,
             options: .curveEaseInOut,
             animations: {
-                icon.frame.origin.x = self.ratedCardsCollectionView.frame.origin.x
-                icon.frame.origin.y = self.ratedCardsCollectionView.frame.origin.y
+                icon.frame.origin.x = self.ratedCardsCollectionView.frame.origin.x+20
+                icon.frame.origin.y = self.ratedCardsCollectionView.frame.origin.y+10
         },
             completion: { (finished: Bool) in
                 icon.isHidden = true
@@ -114,8 +116,8 @@ class TutorialViewController: UIViewController {
     
     func centerHandIcon (icon: UIImageView)
     {
-        icon.frame.origin.x = self.ratedCardPressedCell.frame.origin.x
-        icon.frame.origin.y = self.ratedCardPressedCell.frame.origin.y
+        icon.frame.origin.x = self.ratedCardPressedCell.frame.origin.x+20
+        icon.frame.origin.y = self.ratedCardPressedCell.frame.origin.y+10
     }
     
 }
