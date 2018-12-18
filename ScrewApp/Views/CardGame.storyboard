@@ -26,12 +26,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qr9-ug-sNp">
-                                <rect key="frame" x="17" y="115" width="380" height="85"/>
+                                <rect key="frame" x="17" y="115" width="380" height="90"/>
                                 <color key="tintColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="wpj-pC-MEh"/>
+                                    <constraint firstAttribute="height" constant="90" id="wpj-pC-MEh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="19"/>
                                 <color key="textColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -216,7 +216,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bww-Xh-jU2" secondAttribute="trailing" constant="18" id="qof-VG-S1q"/>
                             <constraint firstItem="g56-Ii-7oo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="whB-5P-cwu"/>
                             <constraint firstItem="EPp-oE-A8I" firstAttribute="top" secondItem="uZS-xv-HGd" secondAttribute="bottom" constant="23.5" id="xRs-Vc-ZCQ"/>
-                            <constraint firstItem="9Y0-1W-gtd" firstAttribute="top" secondItem="Qr9-ug-sNp" secondAttribute="bottom" constant="30" id="xtb-8k-UIb"/>
+                            <constraint firstItem="9Y0-1W-gtd" firstAttribute="top" secondItem="Qr9-ug-sNp" secondAttribute="bottom" constant="25" id="xtb-8k-UIb"/>
                             <constraint firstItem="uZS-xv-HGd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="18" id="yBh-p1-tpP"/>
                             <constraint firstItem="MAw-ji-wcU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zoC-6Z-tGO"/>
                         </constraints>
