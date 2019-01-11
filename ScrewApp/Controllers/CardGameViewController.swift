@@ -46,7 +46,7 @@ class CardGameViewController: UIViewController/*, UIDropInteractionDelegate*/ {
         let layer = UIView()
         
         layer.frame = CGRect(x: userHandCollectionView.frame.origin.x, y: userHandCollectionView.frame.origin.y, width: 194, height: 223)
-        layer.backgroundColor = .white
+//        layer.backgroundColor = .white
         layer.layer.cornerRadius = 7.5
         layer.layer.shadowOffset = CGSize(width: 0, height: 15)
         layer.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3).cgColor
