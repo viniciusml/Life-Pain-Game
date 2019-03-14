@@ -156,12 +156,25 @@
                                 <color key="textColor" red="0.40784313729999999" green="0.43137254899999999" blue="0.4549019608" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bww-Xh-jU2">
+                                <rect key="frame" x="345" y="53" width="51" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="AIl-QV-y8x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="19"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DTJ-9j-Esv"/>
+                                </connections>
+                            </button>
                             <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="213" translatesAutoresizingMaskIntoConstraints="NO" id="WNo-AW-gIr">
-                                <rect key="frame" x="115" y="230" width="184" height="213"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WNo-AW-gIr" id="MCu-rB-3Lq">
+                                <rect key="frame" x="115" y="262" width="184" height="213"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="WNo-AW-gIr" id="MCu-rB-3Lq">
                                     <rect key="frame" x="0.0" y="0.0" width="184" height="212.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JZW-M2-hQC">
                                             <rect key="frame" x="55" y="31" width="76" height="86"/>
@@ -179,19 +192,6 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bww-Xh-jU2">
-                                <rect key="frame" x="345" y="53" width="51" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="51" id="AIl-QV-y8x"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="19"/>
-                                <state key="normal" title="Menu">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="menuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DTJ-9j-Esv"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -203,11 +203,11 @@
                             <constraint firstItem="SHX-rH-e7Q" firstAttribute="top" secondItem="bww-Xh-jU2" secondAttribute="bottom" constant="8" id="Lao-zN-1qz"/>
                             <constraint firstItem="EPp-oE-A8I" firstAttribute="top" secondItem="uZS-xv-HGd" secondAttribute="bottom" constant="23.5" id="LzH-6p-mkl"/>
                             <constraint firstItem="Qr9-ug-sNp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="17" id="NRc-Xz-c69"/>
+                            <constraint firstItem="9Y0-1W-gtd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ox5-Qa-yxH"/>
                             <constraint firstItem="EPp-oE-A8I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="Po5-qZ-Y3H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EPp-oE-A8I" secondAttribute="bottom" constant="20" id="Qrx-Kd-PmX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MAw-ji-wcU" secondAttribute="trailing" id="SVN-hU-CSe"/>
                             <constraint firstAttribute="trailing" secondItem="uZS-xv-HGd" secondAttribute="trailing" constant="18" id="Sdz-7c-OSL"/>
-                            <constraint firstItem="9Y0-1W-gtd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZjH-Js-Rt4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g56-Ii-7oo" secondAttribute="trailing" constant="18" id="cT8-cs-gV8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qr9-ug-sNp" secondAttribute="trailing" constant="17" id="cp5-3M-73Y"/>
                             <constraint firstItem="uZS-xv-HGd" firstAttribute="top" secondItem="g56-Ii-7oo" secondAttribute="bottom" constant="24" id="fmx-ta-ddf"/>
